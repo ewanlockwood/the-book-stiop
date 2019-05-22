@@ -1,0 +1,45 @@
+// You can define relationship inline or separate
+
+Table books {
+  id int [pk]
+  title varchar
+  authors varchar [ref: > author.name]
+  genre varchar [ref: > genre.name]
+  pages int
+  reviews varchar
+  likes varchar
+  dislikes varchar
+  borrowed_by varchar
+}
+
+Table users {
+  id int [primary key]
+  first varchar
+  last varchar
+  dob varchar
+  favourite_genre varchar
+  password varbinary
+  borrowed_books varchar
+  username varchar
+}
+
+Table author {
+  id int [primary key]
+  name varchar
+}
+
+Table genre {
+  code int [primary key]
+  name varchar
+}
+
+
+Ref: "users"."borrowed_books" < "books"."id"
+
+Ref: "users"."favourite_genre" < "genre"."name"
+
+Ref: "books"."likes" < "users"."id"
+
+Ref: "books"."dislikes" < "users"."id"
+
+Ref: "books"."borrowed_by" < "users"."id"
