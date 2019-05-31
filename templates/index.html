@@ -1,0 +1,103 @@
+{% extends 'base.html' %} {% block content %}
+<!-- CONTAINER START -->
+<div class="container homepage-head">
+
+    <!-- TITLE ROW START -->
+    <div class="row">
+        <div class="col-12">
+            <h1> THE BOOK STOP </h1>
+        </div>
+    </div>
+    <!-- TITLE ROW END -->
+
+    <!-- HEADER SQUARE ROW START -->
+    <div class="row">
+        <div class="col-12">
+            <div class="header-square">
+                <div class="header-inner-square">
+                    <p>
+                        … <br> Where you can give in your favourite books in exchange of books from others with the same interests as you.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- HEADER SQUARE ROW END -->
+
+    <!-- BOOK OUTLINE 1 START -->
+    <div class="row book-outline">
+        <div class="col-12">
+            <img class='book-img' src="../static/assets/img/AdobeStock_185437803.jpg"></img>
+        </div>
+    </div>
+    <!-- BOOK OUTLINE 1 START -->
+
+    <!-- SIGN UP HEADER START -->
+    <div class="row sign-up-header-row">
+        <div class="col-12">
+            <h1> SIGN UP </h1>
+            <p> TO BE ABLE TO RECIEVE BOOKS</p>
+        </div>
+    </div>
+    <!-- SIGN UP HEADER END -->
+
+    <!-- SIGN UP START -->
+    <div class="row sign-up-row">
+        <form action="{{ url_for('sign_up') }}" method="POST">
+            <div class="col-12">
+                <p> FIRST NAME </p>
+                <input type="text" name="first" />
+            </div>
+            <div class="col-12">
+                <p> LAST NAME </p>
+                <input type="text" name="last" />
+            </div>
+            <div class="col-12">
+                <p> DATE OF BIRTH </p>
+                <input type="date" name="dob" />
+            </div>
+            <div class="col-12">
+                <p> FAVOURITE GENRE </p>
+                <select id="genres" name="genres">
+                  <option value="" disabled selected>Choose Genre</option>
+                  {% for genrename in genres %}
+                      <option value="{{genrename.genre}}" selected>{{genrename.genre}}</option>
+                  {% endfor %}
+                </select>
+            </div>
+            <div class=" offset-7 col-5">
+                <button>
+                SIGN UP
+            </button>
+            </div>
+        </form>
+    </div>
+    <!-- SIGN UP END -->
+
+    <!-- BOOK SEARCH START -->
+    <!--<div class="container book-search-row">-->
+    <!--    <div class="row">-->
+    <!--        <div class="col-12">-->
+    <!--            <h1> GAIN ACCESS TO HUNDREDS OF BOOKS </h1>-->
+    <!--        </div>-->
+    <!--        <div class="col-12">-->
+    <!--            <img class='book-img' src="../static/assets/img/girl-book.jpg"></img>-->
+    <!--        </div>-->
+    <!--    </div>-->
+    <!--    <div class="row search-row">-->
+    <!--        <div class="col-12"> <h3> SEARCH BY </h3> </div>-->
+    <!--        <div class="col-12"> <input type="text" name="searc"/> </div>-->
+    <!--    </div>-->
+    <!--</div>-->
+    <!-- BOOK SEARCH END -->
+    
+    <!-- FOOTER START -->
+    <footer>
+        <p> Built by Ewan Lockwood </p>
+    </footer>
+    <!-- FOOTER END -->
+
+</div>
+
+<!-- CONTAINER START -->
+{% endblock %}

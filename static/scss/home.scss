@@ -1,0 +1,111 @@
+.homepage-head {
+    height: 300px;
+    width: 100%;
+    background-color: #FFF191;
+        
+    h1 {
+        text-align: center;
+        margin-top: 75px;
+        font-family: 'Raleway', sans-serif;
+        letter-spacing: 5px;
+        font-size: 35px;
+    }
+    
+    .header-square {
+        background-color: white;
+        height: 345px;
+        width: 100%;
+        border: solid 3px #FFF191;
+        padding: 10px;
+        
+        .header-inner-square{
+            border: solid 3px black;
+            height: 100%;
+            width: 100%;
+            padding: 75px 25px;
+            
+            p {
+                text-align: center;
+            }
+        }
+    }
+    .book-outline{
+        .book-img {
+        width: 100%;
+        margin: 0px 0 100px 0;
+    }
+    }
+    .sign-up-header-row {
+        background-color: #FFF191;
+        
+        p {
+            color: white;
+            letter-spacing: 2px;
+            text-align: center;
+        }
+    }
+    .sign-up-row{
+        padding-top: 50px;
+        padding-bottom: 135px;
+        background-color: #FFF191;
+        
+        form {
+            width: 100%;
+            p {
+            color: white;
+            letter-spacing: 2px;
+        }
+        
+            input, select {
+            padding: 5px;
+            font-family: 'Raleway', sans-serif;
+            width: 100%;
+            border: none;
+        }
+        
+            button {
+                margin-top: 10px;
+                padding: 5px;
+                font-family: 'Raleway', sans-serif;
+                width: 100%;
+                border: none;
+                color: white;
+                background-color: #6dff74;
+                letter-spacing: 2px;
+            }
+        }
+    }
+    .book-search-row{
+       .book-img {
+        width: 100%;
+        margin: 100px 0 100px 0;
+    }
+    .search-row{
+        background-color: #FFF191;
+        
+        h3 {
+            text-align: center;
+            padding: 10px;
+            font-family: 'Raleway', sans-serif;
+            letter-spacing: 2px;
+            font-size: 18px;
+        }
+        
+        input {
+            padding: 5px;
+            font-family: 'Raleway', sans-serif;
+            width: 100%;
+            border: none;
+        }
+    }
+    }
+    footer {
+        p {
+            text-align: center;
+            font-family: 'Raleway', sans-serif;
+            letter-spacing: 1px;
+            font-size: 11px;
+            margin: 5px;
+        }
+    }
+}

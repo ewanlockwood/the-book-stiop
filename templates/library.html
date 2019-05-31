@@ -1,0 +1,47 @@
+{% extends 'base.html' %} {% block content %}
+
+<div class="container library-container">
+
+    <div class="row title-row">
+        <div class="col-6">
+            <h1> LIBRARY </h1>
+        </div>
+    </div>
+    {% for book in books %}
+    <div class="row books-row">
+        <div class="col-12">
+            <span> TITLE </span>
+            <h1> {{book.title}} </h1>
+        </div>
+        <div class="col-12">
+            <span> AUTHOR </span>
+            <p> {{ book.authors[0] }} </p>
+        </div>
+        <div class="col-12">
+            <span> GENRE </span>
+            <p> {{ book.genres[0] }} </p>
+        </div>
+        <div class="col-4">
+            <span> PAGES </span>
+            <p> {{ book.pages }} </p>
+        </div>
+        <div class="col-4">
+            <span> LIKES </span>
+            <p> {{ book.likes }} </p>
+        </div>
+        <div class="col-4">
+            <span> DISLIKES </span>
+            <p> {{ book.dislikes }} </p>
+        </div>
+        <div class="col-12">
+            <span> REVIEWS </span> {% for review in book.reviews %}
+            <p> {{review}} </p>
+            {% endfor %}
+        </div>
+    </div>
+
+    {{book.borrowed_by}} {% endfor %}
+
+</div>
+
+{% endblock %}
