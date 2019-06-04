@@ -3,33 +3,79 @@
     width: 100%;
     padding-top: 25px;
     background-color: #FFF191;
-     
-    h1 {
-            text-align: left;
-            font-family: 'Raleway', sans-serif;
-            letter-spacing: 2px;
-            font-size: 28px;
-        }  
+    font-family: 'Raleway', sans-serif;
 
-    .title-row{
-        
+    h1 {
+        text-align: left;
+        letter-spacing: 2px;
+        font-size: 28px;
+    }
+    .title-row {
+        margin-top: 50px;
+
         h1 {
+            position: absolute;
+            left: 0;
             letter-spacing: 5px;
             background-color: white;
             width: 100%;
             padding: 5px;
         }
-        
+
+        .search-bar {
+            margin-top: 100px;
+
+            label {
+                font-size: 21px;
+                color: white;
+                text-align: center;
+                display: block;
+                letter-spacing: 6px;
+            }
+
+            input,
+            button {
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+                margin-top: 5px;
+            }
+            input {
+                border: none;
+                background-color: white;
+                width: 85%;
+            }
+            button {
+                border: none;
+                background-color: #86ea6d;
+                color: white;
+
+            }
+        }
+
+
+
     }
     .books-row {
         background-color: white;
         margin-top: 15px;
         padding: 10px;
-        
+
         span {
             margin: 0;
             color: gray;
             letter-spacing: 2px;
+        }
+    }
+    #create-book-p {
+        margin-top: 25px;
+        text-align: center;
+        color: #b1b5b9;
+        
+        a {
+            background-color: #007bff;
+            padding: 3px;
+            color: white;
         }
     }
 }

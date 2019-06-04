@@ -1,34 +1,20 @@
 {% extends 'base.html' %} {% block content %}
 
-<div class="container library-container">
+<h1> Hello </h1>
 
-    <div class="row title-row">
-        <div class="col-6">
-            <h1> LIBRARY </h1>
-        </div>
-        <form action="{{ url_for('library_searched') }}" method="POST" class="col-12 search-bar">
-            <label for="search"> SEARCH FOR BOOKS </label>
-            <input type="search" id="search" name="search" value='{{request.form.search}}'/>
-            <button type="submit" name="action">SEARCH</button>
-        </form>
-        <div class="col-12">
-            <p id='create-book-p'> ...or simply create one  <a href='{{ url_for("insert_book") }}'> HERE </a> </p>
-        </div>
-    </div>
-    
-    {% for book in books %}
-        <div class="row books-row">
+{% for book in search %}
+    <div class="row books-row">
         <div class="col-12">
             <span> TITLE </span>
             <h1> {{book.title}} </h1>
         </div>
         <div class="col-12">
             <span> AUTHOR </span>
-            <p> {{ book.author }} </p>
+            <p> {{ book.authors[0] }} </p>
         </div>
         <div class="col-12">
             <span> GENRE </span>
-            <p> {{ book.genre }} </p>
+            <p> {{ book.genres[0] }} </p>
         </div>
         <div class="col-4">
             <span> PAGES </span>
@@ -48,8 +34,6 @@
             {% endfor %}
         </div>
     </div>
-     {% endfor %}
-
-</div>
+{% endfor %}
 
 {% endblock %}

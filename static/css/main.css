@@ -13,7 +13,8 @@
     height: 345px;
     width: 100%;
     border: solid 3px #FFF191;
-    padding: 10px; }
+    padding: 10px;
+    margin-top: 100px; }
     .homepage-head .header-square .header-inner-square {
       border: solid 3px black;
       height: 100%;
@@ -76,21 +77,53 @@
     font-size: 11px;
     margin: 5px; }
 
+.navbar {
+  background-color: #FFF191;
+  font-family: 'Raleway', sans-serif; }
+  .navbar .navbar-nav {
+    text-align: center; }
+
 .library-container {
   height: auto;
   width: 100%;
   padding-top: 25px;
-  background-color: #FFF191; }
+  background-color: #FFF191;
+  font-family: 'Raleway', sans-serif; }
   .library-container h1 {
     text-align: left;
-    font-family: 'Raleway', sans-serif;
     letter-spacing: 2px;
     font-size: 28px; }
-  .library-container .title-row h1 {
-    letter-spacing: 5px;
-    background-color: white;
-    width: 100%;
-    padding: 5px; }
+  .library-container .title-row {
+    margin-top: 50px; }
+    .library-container .title-row h1 {
+      position: absolute;
+      left: 0;
+      letter-spacing: 5px;
+      background-color: white;
+      width: 100%;
+      padding: 5px; }
+    .library-container .title-row .search-bar {
+      margin-top: 100px; }
+      .library-container .title-row .search-bar label {
+        font-size: 21px;
+        color: white;
+        text-align: center;
+        display: block;
+        letter-spacing: 6px; }
+      .library-container .title-row .search-bar input,
+      .library-container .title-row .search-bar button {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 5px; }
+      .library-container .title-row .search-bar input {
+        border: none;
+        background-color: white;
+        width: 85%; }
+      .library-container .title-row .search-bar button {
+        border: none;
+        background-color: #86ea6d;
+        color: white; }
   .library-container .books-row {
     background-color: white;
     margin-top: 15px;
@@ -99,5 +132,42 @@
       margin: 0;
       color: gray;
       letter-spacing: 2px; }
+  .library-container #create-book-p {
+    margin-top: 25px;
+    text-align: center;
+    color: #b1b5b9; }
+    .library-container #create-book-p a {
+      background-color: #007bff;
+      padding: 3px;
+      color: white; }
+
+.insert-book-container {
+  height: auto;
+  width: 100%;
+  padding-top: 25px;
+  background-color: #FFF191;
+  font-family: 'Raleway', sans-serif; }
+  .insert-book-container h1 {
+    text-align: left;
+    letter-spacing: 2px;
+    font-size: 18px; }
+  .insert-book-container .title-row {
+    margin-top: 50px; }
+    .insert-book-container .title-row h1 {
+      position: absolute;
+      left: 0;
+      letter-spacing: 5px;
+      background-color: white;
+      width: 100%;
+      padding: 5px; }
+  .insert-book-container .insert-book-form {
+    margin-top: 100px;
+    text-transform: uppercase;
+    letter-spacing: 2px; }
+    .insert-book-container .insert-book-form input, .insert-book-container .insert-book-form select {
+      border: none;
+      padding: 5px; }
+    .insert-book-container .insert-book-form #book_pages {
+      width: 40px; }
 
 /*# sourceMappingURL=main.css.map */

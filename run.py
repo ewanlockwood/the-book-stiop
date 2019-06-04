@@ -32,6 +32,28 @@ def sign_up():
 def library():
     return render_template("library.html", books=mongo.db.books.find())
     
+@app.route('/library_search', methods=['POST'])
+def library_searched():
+    if request.method == 'POST':
+        x = request.form['search']
+    else:
+        return redirect(url_for('library'))
+        
+    return render_template("library_searched.html", search=mongo.db.books.find({ "title": x }))
+    
+@app.route('/insert_book')
+def insert_book():
+    _genres=mongo.db.genres.find()
+    genre_list = [genre for genre in _genres]
+    return render_template('insert_book.html', genres = genre_list)
+    
+@app.route('/submit_book', methods=['POST'])
+def submit_book():
+    books = mongo.db.books
+    books.insert_one(request.form.to_dict())
+    return redirect(url_for('insert_book'))
+    
+    
 # APP ROUTING END
 
 #APP ENVIRONMENT START
