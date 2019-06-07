@@ -1,7 +1,6 @@
 {% extends 'base.html' %} {% block content %}
 
-<h1> Hello </h1>
-
+<!-- DISPLAY EACH BOOK MATCHING SEARCH START -->
 {% for book in search %}
     <div class="row books-row">
         <div class="col-12">
@@ -10,11 +9,11 @@
         </div>
         <div class="col-12">
             <span> AUTHOR </span>
-            <p> {{ book.authors[0] }} </p>
+            <p> {{ book.author }} </p>
         </div>
         <div class="col-12">
             <span> GENRE </span>
-            <p> {{ book.genres[0] }} </p>
+            <p> {{ book.genre }} </p>
         </div>
         <div class="col-4">
             <span> PAGES </span>
@@ -35,5 +34,6 @@
         </div>
     </div>
 {% endfor %}
+<!-- DISPLAY EACH BOOK MATCHING SEARCH END -->
 
 {% endblock %}

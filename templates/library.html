@@ -3,19 +3,26 @@
 <div class="container library-container">
 
     <div class="row title-row">
+        <!-- PAGE TITLE START -->
         <div class="col-6">
             <h1> LIBRARY </h1>
         </div>
+        <!-- PAGE TITLE END -->
+        
+        <!-- SEARCH FORM START -->
         <form action="{{ url_for('library_searched') }}" method="POST" class="col-12 search-bar">
             <label for="search"> SEARCH FOR BOOKS </label>
             <input type="search" id="search" name="search" value='{{request.form.search}}'/>
             <button type="submit" name="action">SEARCH</button>
         </form>
+        <!-- SEARCH FORM END -->
+        
         <div class="col-12">
             <p id='create-book-p'> ...or simply create one  <a href='{{ url_for("insert_book") }}'> HERE </a> </p>
         </div>
     </div>
     
+    <!-- DISPLAY EACH BOOK IN DB START -->
     {% for book in books %}
         <div class="row books-row">
         <div class="col-12">
@@ -24,7 +31,7 @@
         </div>
         <div class="col-12">
             <span> AUTHOR </span>
-            <p> {{ book.author }} </p>
+            <p> {{ book.author_name }} </p>
         </div>
         <div class="col-12">
             <span> GENRE </span>
@@ -47,9 +54,13 @@
             <p> {{review}} </p>
             {% endfor %}
         </div>
+        <div class="col-12">
+            <a id='review-btn' href='{{ url_for("leave_review", book_id=book._id) }}'> LEAVE A REVIEW </a>
+        </div>
     </div>
      {% endfor %}
-
+    <!-- DISPLAY EACH BOOK IN DB END -->
+    
 </div>
 
 {% endblock %}

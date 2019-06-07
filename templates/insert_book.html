@@ -14,12 +14,12 @@
         </div>
         <div class="form-group">
             <label for="book_author"><span> <i class="fas fa-user-edit"></i> </span> Author </label>
-            <input name="authors" id="authors"></input>
+            <input name="author_name" id="authors"></input>
         </div>
         <div class="form-row row">
             <div class="col-6">
                 <label for='genre'> <span> <i class="fas fa-folder-open"></i> </span></label>
-                <select id="genre" name="genres">
+                <select id="genre" name="genre">
                   <option value="" disabled selected>Genre</option>
                   {% for genre in genres %}
                       <option value="{{genre.genre}}">{{ genre.genre }}</option>
@@ -32,7 +32,7 @@
             </div>
 
         </div>
-        <button type='submit' class='btn btn-primary'> Insert Book </button>
+        <button type='submit' class='btn'> Insert Book </button>
     </form>
 
 </div>

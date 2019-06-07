@@ -1,0 +1,21 @@
+{% extends 'base.html' %} {% block content %}
+
+<div class="container leave-review-container">
+
+    <div class="row title-row">
+        <div class="col-6">
+            <h1> LEAVE A REVIEW </h1>
+        </div>
+    </div>
+    <form action="{{ url_for('submit_review', book_id=book._id) }}" method="POST" class="insert-book-form">
+        <div class="form-group">
+            <label for="review"  id="review" name="review"> Review </label>
+            <br>
+            <textarea name='reviews' value='{{request.form.review}}'> </textarea>
+        </div>
+        <button type='submit' name='action' class='btn'> SUBMIT REVIEW </button>
+    </form>
+
+</div>
+
+{% endblock %}

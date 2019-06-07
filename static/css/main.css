@@ -1,13 +1,14 @@
+footer p {
+  text-align: center;
+  font-family: 'Raleway', sans-serif;
+  letter-spacing: 1px;
+  font-size: 11px;
+  margin: 5px; }
+
 .homepage-head {
   height: 300px;
   width: 100%;
   background-color: #FFF191; }
-  .homepage-head h1 {
-    text-align: center;
-    margin-top: 75px;
-    font-family: 'Raleway', sans-serif;
-    letter-spacing: 5px;
-    font-size: 35px; }
   .homepage-head .header-square {
     background-color: white;
     height: 345px;
@@ -27,6 +28,12 @@
     margin: 0px 0 100px 0; }
   .homepage-head .sign-up-header-row {
     background-color: #FFF191; }
+    .homepage-head .sign-up-header-row h1 {
+      text-align: center;
+      margin-top: 75px;
+      font-family: 'Raleway', sans-serif;
+      letter-spacing: 5px;
+      font-size: 35px; }
     .homepage-head .sign-up-header-row p {
       color: white;
       letter-spacing: 2px;
@@ -70,12 +77,6 @@
       font-family: 'Raleway', sans-serif;
       width: 100%;
       border: none; }
-  .homepage-head footer p {
-    text-align: center;
-    font-family: 'Raleway', sans-serif;
-    letter-spacing: 1px;
-    font-size: 11px;
-    margin: 5px; }
 
 .navbar {
   background-color: #FFF191;
@@ -88,7 +89,8 @@
   width: 100%;
   padding-top: 25px;
   background-color: #FFF191;
-  font-family: 'Raleway', sans-serif; }
+  font-family: 'Raleway', sans-serif;
+  height: auto; }
   .library-container h1 {
     text-align: left;
     letter-spacing: 2px;
@@ -100,7 +102,6 @@
       left: 0;
       letter-spacing: 5px;
       background-color: white;
-      width: 100%;
       padding: 5px; }
     .library-container .title-row .search-bar {
       margin-top: 100px; }
@@ -122,7 +123,7 @@
         width: 85%; }
       .library-container .title-row .search-bar button {
         border: none;
-        background-color: #86ea6d;
+        background-color: #53be69;
         color: white; }
   .library-container .books-row {
     background-color: white;
@@ -132,12 +133,19 @@
       margin: 0;
       color: gray;
       letter-spacing: 2px; }
+    .library-container .books-row #review-btn {
+      border: none;
+      padding: 10px;
+      margin: auto;
+      display: block;
+      background-color: #B7E4EF;
+      color: white; }
   .library-container #create-book-p {
     margin-top: 25px;
     text-align: center;
-    color: #b1b5b9; }
+    color: #ff7272; }
     .library-container #create-book-p a {
-      background-color: #007bff;
+      background-color: #ff7272;
       padding: 3px;
       color: white; }
 
@@ -147,10 +155,6 @@
   padding-top: 25px;
   background-color: #FFF191;
   font-family: 'Raleway', sans-serif; }
-  .insert-book-container h1 {
-    text-align: left;
-    letter-spacing: 2px;
-    font-size: 18px; }
   .insert-book-container .title-row {
     margin-top: 50px; }
     .insert-book-container .title-row h1 {
@@ -158,16 +162,26 @@
       left: 0;
       letter-spacing: 5px;
       background-color: white;
-      width: 100%;
-      padding: 5px; }
+      padding: 5px;
+      font-size: 28px;
+      width: 250px; }
   .insert-book-container .insert-book-form {
-    margin-top: 100px;
+    padding: 133px 0;
     text-transform: uppercase;
     letter-spacing: 2px; }
     .insert-book-container .insert-book-form input, .insert-book-container .insert-book-form select {
       border: none;
       padding: 5px; }
+    .insert-book-container .insert-book-form #authors, .insert-book-container .insert-book-form #book_title {
+      width: 100%; }
     .insert-book-container .insert-book-form #book_pages {
       width: 40px; }
+    .insert-book-container .insert-book-form button {
+      background-color: #53be69;
+      color: white;
+      padding: 10px;
+      letter-spacing: 1px;
+      display: block;
+      margin: 25px auto; }
 
 /*# sourceMappingURL=main.css.map */
