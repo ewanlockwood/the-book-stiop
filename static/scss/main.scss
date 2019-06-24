@@ -1,7 +1,9 @@
+body {
+    font-family: 'Raleway';
+}
 footer {
         p {
             text-align: center;
-            font-family: 'Raleway', sans-serif;
             letter-spacing: 1px;
             font-size: 11px;
             margin: 5px;
@@ -12,3 +14,6 @@ footer {
 @import 'navbar.scss';
 @import 'library.scss';
 @import 'insert_book.scss';
+@import 'review.scss';
+@import 'user.scss';
+@import 'register.scss'

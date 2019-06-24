@@ -1,16 +1,19 @@
-.library-container {
+.leave-review-container {
+    height: 350px;
+    width: 100%;
+    padding-top: 25px;
     background-color: #FFF191;
     font-family: 'Raleway', sans-serif;
-    height: auto;
-
+    
     h1 {
         text-align: left;
         letter-spacing: 2px;
         font-size: 28px;
     }
     .title-row {
+        margin-top: 50px;
+
         h1 {
-            margin: 100px 0 0 0;
             position: absolute;
             left: 0;
             letter-spacing: 5px;
@@ -18,17 +21,15 @@
             padding: 5px;
             
         }
-    }
-    .book-search-row {
         .search-bar {
-            margin-top: 175px;
+            margin-top: 100px;
 
             label {
                 font-size: 21px;
                 color: white;
                 text-align: center;
                 display: block;
-                letter-spacing: 3px;
+                letter-spacing: 6px;
             }
 
             input,
@@ -45,42 +46,60 @@
             }
             button {
                 border: none;
-                background-color: #166fc9;
+                background-color: #53be69;
                 color: white;
 
             }
         }
     }
-    #create-book-p {
-        margin-top: 25px;
-        text-align: center;
-        color: #53be69;
+    
+    .insert-book-form {
+        margin-top: 75px;
+        padding: 15px;
         
-        a {
-            background-color: #53be69;
-            padding: 3px;
-            color: white;
+        label {
+            font-size: 32px;
+            letter-spacing: 1px;
+            background: white;
+            padding: 10px;
+            text-align: center;
+            width: 100%;
+                    
+            span{
+                color: grey;
+                background: white;
+                padding: 5px;
+                font-size: 21.5px;
+                
+                i {
+                    color: #b7e4ef;
+                }
+            }
         }
-    }
-    .books-row {
-        background-color: white;
-        margin-top: 15px;
-        padding: 20px 10px;
-
-        span {
-            margin: 0;
-            color: gray;
-            letter-spacing: 2px;
+        textarea {
+            width: 100%;
+            border: solid 4px #fff191;
+            height: 300px;
         }
-        #review-btn {
+        button {
             border: none;
             padding: 10px;
             margin: auto;
             display: block;
-            background-color: #166fc9;
+            background-color: #B7E4EF;
             color: white;
-            width: 171px;
+        }
+        textarea:focus {
+            border: solid 2px #B7E4EF;
         }
     }
+}
+
+.leave-review-container + footer {
+    position: fixed;
+    bottom: 0;
     
+    width: 100%;
+    
+
 }

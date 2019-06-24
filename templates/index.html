@@ -25,6 +25,14 @@
     </div>
     <!-- BOOK OUTLINE 1 START -->
 
+    <!-- LIBRARY LINK START -->
+    <div class="row library-link">
+        <div class="col-12">
+            <p> Visit the <span><a href="{{url_for('library')}}">Library</a></span></p>
+        </div>
+    </div>
+    <!-- LIBRARY LINK END -->
+    
     <!-- SIGN UP HEADER START -->
     <div class="row sign-up-header-row">
         <div class="col-12">
@@ -36,14 +44,14 @@
 
     <!-- SIGN UP START -->
     <div class="row sign-up-row">
-        <form action="{{ url_for('sign_up') }}" method="POST">
+        <form action="{{ url_for('register') }}" method="POST">
             <div class="col-12">
-                <p> FIRST NAME </p>
-                <input type="text" name="first" />
+                <p> USERNAME </p>
+                <input type="text" name="username" />
             </div>
             <div class="col-12">
-                <p> LAST NAME </p>
-                <input type="text" name="last" />
+                <p> PASSWORD </p>
+                <input type="password" name="password" />
             </div>
             <div class="col-12">
                 <p> DATE OF BIRTH </p>

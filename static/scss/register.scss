@@ -1,0 +1,30 @@
+.register_container {
+    margin-top: 100px;
+    font-family: 'Raleway' sans-serif;
+
+    input {
+        border: solid 1px #fff191;
+        padding: 5px;
+        width: 100%;
+        background-color: white;
+    }
+    select {
+        border: solid 1px #fff191;
+        width: 100%;
+        padding: 5px;
+    }
+    label {
+        letter-spacing: 2px;
+        i {
+            color: #fff191;
+        }
+    }
+    button {
+        border: none;
+        padding: 10px;
+        background-color: #166fc9;
+        color: white;
+        width: 100%;
+        border-radius: 0px;
+    }
+}

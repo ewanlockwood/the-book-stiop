@@ -1,0 +1,41 @@
+{% extends 'base.html' %} {% block content %}
+<!-- CONTAINER START -->
+<div class="container user-profile-container">
+    <!-- USERNAME ROW START -->
+    <div class="row">
+        <div class="col-12">
+            <h1> Hi <span> {{ user.username }} </span>, </h1>
+        </div>
+    </div>
+    <!-- USERNAME ROW END -->
+    
+    <!-- PROFILE DETAILS ROW START -->
+    <div class="row">
+        <form action="{{ url_for('update_profile', user_id = session.username) }}" method="POST">
+            <!-- FAVOURITE GENRE START -->
+            <div class="col-12"> <span id='fav_genre_span'> Your favourite genre is </span>
+                <select name='new_genre' id='new_genre'>
+                    <option value="" disabled selected> Choose Genre </option>
+                    {% for genre in genres %}
+                        {% if genre.genre == user.favourite_genre %} 
+                        <option value="{{genre.genre}}" selected>{{genre.genre}}</option>
+                        {% else %}
+                        <option value="{{genre.genre}}">{{genre.genre}}</option>
+                        {% endif %}
+                        
+                    {% endfor %}
+                </select>
+            </div>
+            <!-- FAVOURITE GENRE END -->
+            
+            <!-- SUBMIT BUTTON START -->
+            <div class="col-12">
+                <button id='update_profile_btn' type="submit" name="action" > Update Profile </button>
+            </div>
+            <!-- SUBMIT BUTTON END -->
+        </form>
+    </div>
+    <!-- PROFILE DETAILS ROW START -->
+</div>
+<!-- CONTAINER START -->
+{% endblock %}

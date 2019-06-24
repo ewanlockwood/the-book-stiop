@@ -99,11 +99,12 @@ footer p {
   background-color: #FFF191;
   font-family: 'Raleway', sans-serif; }
   .navbar #user-id {
-    color: #000000; }
+    color: #166fc9;
+    margin-left: 30px; }
   .navbar .navbar-nav {
     text-align: center; }
     .navbar .navbar-nav .nav-link {
-      font-size: 35px;
+      font-size: 50px;
       letter-spacing: 5px; }
     .navbar .navbar-nav .dropdown-menu {
       background: none;
@@ -133,6 +134,9 @@ footer p {
         letter-spacing: 1px; }
 
 .library-container {
+  height: auto;
+  width: 100%;
+  padding-top: 25px;
   background-color: #FFF191;
   font-family: 'Raleway', sans-serif;
   height: auto; }
@@ -140,47 +144,40 @@ footer p {
     text-align: left;
     letter-spacing: 2px;
     font-size: 28px; }
-  .library-container .title-row h1 {
-    margin: 100px 0 0 0;
-    position: absolute;
-    left: 0;
-    letter-spacing: 5px;
-    background-color: white;
-    padding: 5px; }
-  .library-container .book-search-row .search-bar {
-    margin-top: 175px; }
-    .library-container .book-search-row .search-bar label {
-      font-size: 21px;
-      color: white;
-      text-align: center;
-      display: block;
-      letter-spacing: 3px; }
-    .library-container .book-search-row .search-bar input,
-    .library-container .book-search-row .search-bar button {
-      display: block;
-      margin-left: auto;
-      margin-right: auto;
-      margin-top: 5px; }
-    .library-container .book-search-row .search-bar input {
-      border: none;
+  .library-container .title-row {
+    margin-top: 100px; }
+    .library-container .title-row h1 {
+      position: absolute;
+      left: 0;
+      letter-spacing: 5px;
       background-color: white;
-      width: 85%; }
-    .library-container .book-search-row .search-bar button {
-      border: none;
-      background-color: #166fc9;
-      color: white; }
-  .library-container #create-book-p {
-    margin-top: 25px;
-    text-align: center;
-    color: #53be69; }
-    .library-container #create-book-p a {
-      background-color: #53be69;
-      padding: 3px;
-      color: white; }
+      padding: 5px; }
+    .library-container .title-row .search-bar {
+      margin-top: 100px; }
+      .library-container .title-row .search-bar label {
+        font-size: 21px;
+        color: white;
+        text-align: center;
+        display: block;
+        letter-spacing: 6px; }
+      .library-container .title-row .search-bar input,
+      .library-container .title-row .search-bar button {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 5px; }
+      .library-container .title-row .search-bar input {
+        border: none;
+        background-color: white;
+        width: 85%; }
+      .library-container .title-row .search-bar button {
+        border: none;
+        background-color: #53be69;
+        color: white; }
   .library-container .books-row {
     background-color: white;
     margin-top: 15px;
-    padding: 20px 10px; }
+    padding: 10px; }
     .library-container .books-row span {
       margin: 0;
       color: gray;
@@ -193,6 +190,14 @@ footer p {
       background-color: #166fc9;
       color: white;
       width: 171px; }
+  .library-container #create-book-p {
+    margin-top: 25px;
+    text-align: center;
+    color: #ff7272; }
+    .library-container #create-book-p a {
+      background-color: #ff7272;
+      padding: 3px;
+      color: white; }
 
 .insert-book-container {
   height: auto;
@@ -306,43 +311,7 @@ footer p {
   width: 100%; }
 
 .user-profile-container {
-  margin: 100px 0 0 0;
+  margin: 72px 0 0 0;
   font-family: 'Raleway'; }
-  .user-profile-container h1 {
-    font-size: 30px; }
-  .user-profile-container #fav_genre_span, .user-profile-container select {
-    font-size: 14px; }
-  .user-profile-container select {
-    border: none;
-    color: #166fc9; }
-  .user-profile-container #update_profile_btn {
-    background-color: #166fc9;
-    border-radius: 0;
-    border: none;
-    color: white; }
-
-.register_container {
-  margin-top: 100px;
-  font-family: 'Raleway' sans-serif; }
-  .register_container input {
-    border: solid 1px #fff191;
-    padding: 5px;
-    width: 100%;
-    background-color: white; }
-  .register_container select {
-    border: solid 1px #fff191;
-    width: 100%;
-    padding: 5px; }
-  .register_container label {
-    letter-spacing: 2px; }
-    .register_container label i {
-      color: #fff191; }
-  .register_container button {
-    border: none;
-    padding: 10px;
-    background-color: #166fc9;
-    color: white;
-    width: 100%;
-    border-radius: 0px; }
 
 /*# sourceMappingURL=main.css.map */

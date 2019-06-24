@@ -1,8 +1,58 @@
-.navbar{
+.navbar {
     background-color: #FFF191;
     font-family: 'Raleway', sans-serif;
     
-    .navbar-nav{
-        text-align: center;
+    #user-id {
+        color: #000000;
     }
+    .navbar-nav {
+        text-align: center;
+        
+        .nav-link {
+            font-size: 35px;
+            letter-spacing: 5px;
+        }
+
+        .dropdown-menu {
+            background: none;
+            border: none;
+            padding: 0;
+            margin: 0;
+            text-align: center;
+            font-size: 14px;
+        }
+
+        .login-row {
+            form {
+                display: block;
+                margin: 20px auto 5px auto;
+
+                p {
+                    margin: 0;
+                    letter-spacing: 1px;
+                    text-align: left;
+                }
+
+                input {
+                    border: none;
+                    padding: 5px;
+                    letter-spacing: 3px;
+                    text-align: center;
+                    margin-bottom: 2px;
+                }
+
+                button {
+                    border: none;
+                    margin: 10px;
+                    background-color: #60a6f0;
+                    color: white;
+                    letter-spacing: 1px;
+                }
+
+
+            }
+        }
+    }
+
+
 }
