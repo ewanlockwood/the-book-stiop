@@ -1,7 +1,7 @@
 {% extends 'base.html' %} {% block content %}
 
 <!-- CONTAINER START -->
-<div class="container homepage-head">
+<div class="container-fluid homepage-head">
 
     <!-- HEADER SQUARE ROW START -->
     <div class="row">
@@ -33,6 +33,8 @@
     </div>
     <!-- LIBRARY LINK END -->
     
+    {% if not session %}
+    
     <!-- SIGN UP HEADER START -->
     <div class="row sign-up-header-row">
         <div class="col-12">
@@ -41,7 +43,7 @@
         </div>
     </div>
     <!-- SIGN UP HEADER END -->
-
+    
     <!-- SIGN UP START -->
     <div class="row sign-up-row">
         <form action="{{ url_for('register') }}" method="POST">
@@ -53,17 +55,13 @@
                 <p> PASSWORD </p>
                 <input type="password" name="password" />
             </div>
-            <div class="col-12">
-                <p> DATE OF BIRTH </p>
-                <input type="date" name="dob" />
-            </div>
-            <div class="col-12">
+            <div class="col-12"> 
                 <p> FAVOURITE GENRE </p>
-                <select id="genres" name="genres">
-                  <option value="" disabled selected>Choose Genre</option>
-                  {% for genrename in genres %}
-                      <option value="{{genrename.genre}}" selected>{{genrename.genre}}</option>
-                  {% endfor %}
+                <select name='new_genre' id='new_genre'>
+                    <option value="" disabled selected> Choose Genre </option>
+                    {% for genre in genres %}
+                        <option value="{{genre.genre}}">{{genre.genre}}</option>
+                    {% endfor %}
                 </select>
             </div>
             <div class=" offset-7 col-5">
@@ -75,7 +73,8 @@
     </div>
     <!-- SIGN UP END -->
     
-
+    {% endif %}
+    
 </div>
 <!-- CONTAINER START -->
 

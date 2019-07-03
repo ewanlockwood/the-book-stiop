@@ -16,7 +16,7 @@
             letter-spacing: 5px;
             background-color: white;
             padding: 5px;
-            
+
         }
     }
     .book-search-row {
@@ -55,7 +55,7 @@
         margin-top: 25px;
         text-align: center;
         color: #53be69;
-        
+
         a {
             background-color: #53be69;
             padding: 3px;
@@ -79,8 +79,103 @@
             display: block;
             background-color: #166fc9;
             color: white;
-            width: 171px;
+            font-size: 13px;
+
+        }
+        #book-collection-btn {
+            border: none;
+            padding: 10px;
+            margin: auto;
+            display: block;
+            background-color: #53be69;
+            color: white;
+            font-size: 13px;
+
         }
     }
-    
+
+}
+
+@media(min-width: 992px){
+    .library-container {
+    background-color: #FFF191;
+    font-family: 'Raleway', sans-serif;
+    height: auto;
+
+    .book-search-row {
+        .search-bar {
+            margin-top: 175px;
+
+            label {
+                font-size: 21px;
+                color: white;
+                text-align: center;
+                display: block;
+                letter-spacing: 3px;
+            }
+
+            input,
+            button {
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+                margin-top: 5px;
+            }
+            input {
+                border: none;
+                background-color: white;
+                width: 50%;
+            }
+            button {
+                border: none;
+                background-color: #166fc9;
+                color: white;
+
+            }
+        }
+    }
+    #create-book-p {
+        margin-top: 25px;
+        text-align: center;
+        color: #53be69;
+
+        a {
+            background-color: #53be69;
+            padding: 3px;
+            color: white;
+        }
+    }
+    .books-row {
+        background-color: white;
+        margin-top: 15px;
+        padding: 20px 10px;
+
+        span {
+            margin: 0;
+            color: gray;
+            letter-spacing: 2px;
+        }
+        #review-btn {
+            border: none;
+            padding: 10px;
+            margin: auto;
+            display: block;
+            background-color: #166fc9;
+            color: white;
+            font-size: 13px;
+
+        }
+        #book-collection-btn {
+            border: none;
+            padding: 10px;
+            margin: auto;
+            display: block;
+            background-color: #53be69;
+            color: white;
+            font-size: 13px;
+
+        }
+    }
+
+}
 }

@@ -1,9 +1,8 @@
 import os
-from flask import Flask, render_template, redirect, request, url_for, session
+from flask import Flask, render_template, redirect, request, url_for, session, flash
 from flask_pymongo import PyMongo
 from bson.objectid import ObjectId
 import bcrypt
-
 
 # APP START
 app = Flask(__name__)
@@ -13,19 +12,16 @@ app.config["MONGO_URI"] = 'mongodb+srv://root:r00tUser@alphacluster-lqak4.mongod
 mongo = PyMongo(app)
 
 # APP ROUTING START 
-
 # Index
 @app.route('/')
 @app.route('/index')
 def index():
-    if 'username' in session:
-        print(session['username'])
-    return render_template("index.html", genres=mongo.db.genres.find())
+    genres = mongo.db.genres.find()
+    return render_template("index.html", genres=genres)
     
 # Library
 @app.route('/library')
 def library():
-    print('hello')
     books = mongo.db.books.find()
     authors = mongo.db.authors.find()
     author_ids = []
@@ -81,6 +77,12 @@ def submit_book():
     books = mongo.db.books
     authors = mongo.db.authors
     
+    book_title = request.form.to_dict()['title']
+    print(book_title)
+    seperater = '+'
+    new_book = seperater.join(book_title)
+    print(new_book)
+           
     # Create new author in Authors
     new_author = authors.insert_one({'author_name': request.form.to_dict()['author_name']})
     author_id = new_author.inserted_id
@@ -104,6 +106,31 @@ def leave_review(book_id):
     the_book = mongo.db.books.find_one({'_id': ObjectId(book_id)})
     all_reviews = mongo.db.book.reviews.find()
     return render_template('leave_review.html', book=the_book, reviews=all_reviews)
+    
+# Add Book to Collection
+@app.route('/add_collection/<book_id>')
+def add_collection(book_id):
+    if 'username' in session:
+        users = mongo.db.users
+        users.update_one(
+            {'username' : session['username'] },
+            { '$push' : { 'book_collection' : ObjectId(book_id) } }
+        )
+    flash('Book was added to your collection!')
+    
+    return redirect(url_for('library'))
+    
+@app.route('/remove_collection/<book_id>')
+def remove_collection(book_id):
+    if 'username' in session:
+        users = mongo.db.users
+        
+        users.update_one(
+            {'username' : session['username']},
+            {'$pull' : {'book_collection': ObjectId(book_id)}}
+        )
+    
+    return redirect(url_for('user', user_id = session['username']))  
 
 # Submit book review
 @app.route('/submit_review/<book_id>', methods=['POST'])
@@ -130,7 +157,12 @@ def register():
         if existing_user is None:
             hashpass = bcrypt.hashpw(request.form['password'].encode('utf-8'), bcrypt.gensalt())
             fav_genre = request.form.to_dict()['genre']
-            users.insert_one({'username' : request.form.to_dict()['username'], 'password' : hashpass, 'favourite_genre' : fav_genre })
+            users.insert_one({
+                'username' : request.form.to_dict()['username'], 
+                'password' : hashpass, 
+                'favourite_genre' : fav_genre,
+                'book_collection' : []
+            })
             session['username'] = request.form.to_dict()['username']
             return redirect(url_for('index'))
             
@@ -169,9 +201,30 @@ def login():
 @app.route('/user/<user_id>')
 def user(user_id):
     if 'username' in session:
+        books = mongo.db.books.find()
         the_user = mongo.db.users.find_one({'username': user_id })
+        updated_books = []
+        
+        for book in books:
+            updated_books.append(book)
+            
+        user_book_collection = [] 
+        
+        for book in the_user['book_collection']:
+            book_id = book
+        
+            for book in updated_books:
+                if book['_id'] == book_id:
+                    user_book_collection.append(book)
+                    
+        print(user_book_collection)
+
+        # display details for books only in book_collection
+        
+        
+                
         genres = mongo.db.genres.find()
-        return render_template('user.html', user=the_user, genres=genres)
+        return render_template('user.html', user=the_user, genres=genres, user_book_collection = user_book_collection)
     else:
         return render_template('index.html')
 
@@ -191,7 +244,6 @@ def end_session():
 
 
 #APP ENVIRONMENT START
-
 if __name__ == '__main__':
     app.secret_key = 'testkey'
     app.run(host=os.environ.get('IP'),

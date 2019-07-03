@@ -37,27 +37,26 @@
                             <a class='nav-link' href="{{ url_for('user', user_id = session.username) }}"> EDIT </a>
                             <a class='nav-link' href="{{ url_for('end_session', user_id = session.username) }}"> LOG OUT </a>
                         </div>
-                        
                     </li>
                     {% endif %}
                     {% if not session %}
-                        <div class="row login-row">
-                            <form action="{{ url_for('login') }}" method="POST">
-                                <div class="col-12">
+                            <form class='login-row form-inline' action="{{ url_for('login') }}" method="POST">
+                                <div class="col-sm-12 col-md-5 col-lg-4">
                                     <p> USERNAME </p>
                                     <input type="text" name="username" />
                                 </div>
-                                <div class="col-12">
+                                <div class="col-sm-12 col-md-5 col-lg-4">
                                     <p> PASSWORD </p>
                                     <input type="password" name="password" />
                                 </div>
-                                <button> Login </button>
+                                <div class="col-sm-12 col-md-5 col-lg-2">
+                                    <button> Login </button>
+                                </div>
                             </form>
-                        </div>
+                        <!--<div>-->
+                        <!--    Don't have an account? <a href="{{ url_for('register') }}">Sign up here</a>.-->
+                        <!--</div>-->
                     {% endif %}
-                        <div>
-                            Don't have an account? <a href="{{ url_for('register') }}">Sign up here</a>.
-                        </div>
                     </li>
                 </ul>
             </div>
@@ -67,8 +66,18 @@
         {% block content %} {% endblock %}
     
         <!-- FOOTER START -->
-        <footer>
-            <p> Built by Ewan Lockwood </p>
+        <footer class='container footer-container'>
+            <div class="row">
+                <ul>
+                    <li> <a href="{{ url_for('index') }}"> Home </a></li>
+                    <li> <a href="{{ url_for('library') }}"> Library </a></li>
+                    {% if session %}
+                    <li>
+                        <a id='user-id' href="{{ url_for('user', user_id = session.username) }}"> Profile </a>
+                    </li>
+                    {% endif %}
+                </ul>
+            </div>
         </footer>
         <!-- FOOTER END -->
         

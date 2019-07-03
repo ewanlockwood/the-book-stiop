@@ -8,10 +8,10 @@
         </div>
     </div>
     <!-- USERNAME ROW END -->
-    
+
     <!-- PROFILE DETAILS ROW START -->
     <div class="row">
-        <form action="{{ url_for('update_profile', user_id = session.username) }}" method="POST">
+        <form class='col-12' action="{{ url_for('update_profile', user_id = session.username) }}" method="POST">
             <!-- FAVOURITE GENRE START -->
             <div class="col-12"> <span id='fav_genre_span'> Your favourite genre is </span>
                 <select name='new_genre' id='new_genre'>
@@ -22,15 +22,45 @@
                         {% else %}
                         <option value="{{genre.genre}}">{{genre.genre}}</option>
                         {% endif %}
-                        
                     {% endfor %}
                 </select>
             </div>
             <!-- FAVOURITE GENRE END -->
-            
+
+            <!-- BOOK COLLECTION ROW START -->
+            {% for book in user_book_collection %}
+            <div class="row books-row">
+                <div class="col-12">
+                    <span> TITLE </span>
+                    <h1> {{book.title}} </h1>
+                </div>
+                <div class="col-6">
+                    <span> AUTHOR </span>
+                    <p> {{ book.author_name }} </p>
+                </div>
+                <div class="col-6">
+                    <span> GENRE </span>
+                    <p> {{ book.genre }} </p>
+                </div>
+                <div class="col-4">
+                    <span> PAGES </span>
+                    <p> {{ book.pages }} </p>
+                </div>
+                <div class="col-12">
+                    <span> REVIEWS </span> {% for review in book.reviews %}
+                    <p> {{review}} </p>
+                    {% endfor %}
+                </div>
+                <div class="col-6">
+                    <a id='book-collection-btn' href='{{ url_for("remove_collection", book_id=book._id) }}'>  Remove Book from Collection <i class="fas fa-book-medical"></i> </a>
+                </div>
+            </div>
+            {% endfor %}
+            <!-- BOOK COLLECTION ROW END -->
+
             <!-- SUBMIT BUTTON START -->
             <div class="col-12">
-                <button id='update_profile_btn' type="submit" name="action" > Update Profile </button>
+                <button id='update_profile_btn' type="submit" name="action"> Update Profile </button>
             </div>
             <!-- SUBMIT BUTTON END -->
         </form>

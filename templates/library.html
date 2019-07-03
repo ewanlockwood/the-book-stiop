@@ -1,5 +1,5 @@
 {% extends 'base.html' %} {% block content %}
-<div class="container library-container">
+<div class="container-fluid library-container">
     <!-- PAGE TITLE START -->
     <div class="row title-row">
         <div class="col-6">
@@ -61,6 +61,20 @@
         <div class="col-6">
             <a id='review-btn' href='{{ url_for("leave_review", book_id=book._id) }}'>  LEAVE A REVIEW <i class="fas fa-comment-medical"></i> </a>
         </div>
+        {% if session %}
+        <div class="col-6">
+            <a id='book-collection-btn' href='{{ url_for("add_collection", book_id=book._id) }}'>  ADD BOOK TO COLLECTION <i class="fas fa-book-medical"></i> </a>
+            {% with messages = get_flashed_messages() %}
+                {% if messages %}
+                    <ul class=flashes>
+                        {% for message in messages %}
+                            <li>{{ message }}</li>
+                        {% endfor %}
+                    </ul>
+                {% endif %}
+            {% endwith %}
+        </div>
+        {% endif %}
     </div>
     {% endfor %}
     <!-- DISPLAY EACH BOOK IN DB END -->
