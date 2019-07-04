@@ -1,11 +1,19 @@
 body {
   font-family: 'Raleway'; }
 
-footer p {
-  text-align: center;
-  letter-spacing: 1px;
-  font-size: 11px;
-  margin: 5px; }
+.footer-container {
+  background-color: #FFF191;
+  margin: 0;
+  padding: 100px 100px; }
+  .footer-container ul {
+    width: 100%;
+    text-align: center; }
+  .footer-container ul li {
+    letter-spacing: 1px;
+    font-size: 21px;
+    list-style: none;
+    display: inline-flex;
+    margin-left: 30px; }
 
 .homepage-head {
   height: 300px;
@@ -185,10 +193,11 @@ footer p {
         border: none; } }
 @media (min-width: 992px) {
   .homepage-head {
+    height: auto;
     width: 100%;
-    background-color: #FFF191; }
+    background-color: white; }
     .homepage-head .header-square {
-      background-color: white;
+      background-color: transparent;
       height: auto;
       width: 66%;
       border: solid 3px #FFF191;

@@ -1,15 +1,23 @@
 body {
     font-family: 'Raleway';
 }
-footer {
-    
-        p {
+.footer-container {
+    background-color: #FFF191;
+    margin: 0;
+    padding: 100px 100px;
+        
+        ul {
+            width: 100%;
             text-align: center;
-            letter-spacing: 1px;
-            font-size: 11px;
-            margin: 5px;
         }
-    }
+        ul li {
+            letter-spacing: 1px;
+            font-size: 21px;
+            list-style: none;
+            display: inline-flex;
+            margin-left: 30px;
+        }
+}
 
 @import 'home.scss';
 @import 'navbar.scss';

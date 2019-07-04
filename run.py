@@ -3,6 +3,9 @@ from flask import Flask, render_template, redirect, request, url_for, session, f
 from flask_pymongo import PyMongo
 from bson.objectid import ObjectId
 import bcrypt
+import urllib.request
+import json
+import textwrap
 
 # APP START
 app = Flask(__name__)
@@ -10,6 +13,10 @@ app.config["MONGO_DBNAME"] = 'the_book_stop'
 app.config["MONGO_URI"] = 'mongodb+srv://root:r00tUser@alphacluster-lqak4.mongodb.net/the_book_stop?retryWrites=true'
 
 mongo = PyMongo(app)
+
+# Google Books API START
+
+base_api_link = 'https://www.googleapis.com/books/v1/volumes?q=title:'
 
 # APP ROUTING START 
 # Index
@@ -26,19 +33,39 @@ def library():
     authors = mongo.db.authors.find()
     author_ids = []
     updated_books = []
-    # METHOD 1: Copy books into new array then manipulate that array
-    # METHOS 2: 
     
     # If author['_id'] == book['author_id'] book['author_name'] == author['author_name']
     updated_authors = []
     for author in authors:
         updated_authors.append(author)
     
-    # print(updated_authors)
-    
     for book in books:
         author_id = book['author_id']
         author_name = ''
+        
+        book_title = book['title']
+        
+        google_api_title = book_title.replace(' ', '+')
+        print(google_api_title)
+        
+        with urllib.request.urlopen(base_api_link + google_api_title) as f:
+            text = f.read()
+        
+        decoded_text = text.decode("utf-8")
+        obj = json.loads(decoded_text) # deserializes decoded_text to a Python object
+        google_book_obj = obj["items"][0]
+        book_href = google_book_obj['volumeInfo']
+        
+        if 'imageLinks' in book_href:
+            print(book_href['imageLinks']['thumbnail'])
+        else:
+            print('no href')
+        
+        #['imageLinks']
+        #["thumbnail"]
+    
+        
+        
         
         for author in updated_authors:
             if author['_id'] == ObjectId(author_id):
@@ -50,7 +77,7 @@ def library():
     
         updated_books.append(book)
         
-        
+   
     # print(updated_books)
     return render_template("library.html", books=updated_books)
 
@@ -77,12 +104,13 @@ def submit_book():
     books = mongo.db.books
     authors = mongo.db.authors
     
-    book_title = request.form.to_dict()['title']
-    print(book_title)
-    seperater = '+'
-    new_book = seperater.join(book_title)
-    print(new_book)
-           
+    
+    # volume_info = obj["items"][0] 
+
+    # # displays title, summary, author, domain, page count and language
+    # print("\nTitle:", volume_info["volumeInfo"]["imageLink"])
+    # print("\n***")
+    
     # Create new author in Authors
     new_author = authors.insert_one({'author_name': request.form.to_dict()['author_name']})
     author_id = new_author.inserted_id
