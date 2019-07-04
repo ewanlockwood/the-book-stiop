@@ -2,18 +2,15 @@ body {
   font-family: 'Raleway'; }
 
 .footer-container {
-  background-color: #FFF191;
-  margin: 0;
-  padding: 100px 100px; }
+  background-color: #FFF191; }
   .footer-container ul {
-    width: 100%;
-    text-align: center; }
-  .footer-container ul li {
-    letter-spacing: 1px;
-    font-size: 21px;
     list-style: none;
-    display: inline-flex;
-    margin-left: 30px; }
+    width: 100%;
+    padding: 0; }
+  .footer-container li {
+    text-align: center; }
+  .footer-container p {
+    font-size: 11px; }
 
 .homepage-head {
   height: 300px;

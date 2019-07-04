@@ -46,7 +46,9 @@ def library():
         book_title = book['title']
         
         google_api_title = book_title.replace(' ', '+')
-        print(google_api_title)
+        # print(google_api_title)
+        
+        book_isbn_num = book['isbn_num']
         
         with urllib.request.urlopen(base_api_link + google_api_title) as f:
             text = f.read()
@@ -57,16 +59,9 @@ def library():
         book_href = google_book_obj['volumeInfo']
         
         if 'imageLinks' in book_href:
-            print(book_href['imageLinks']['thumbnail'])
-        else:
-            print('no href')
-        
-        #['imageLinks']
-        #["thumbnail"]
+            # print(book_href['imageLinks']['thumbnail'])
+            book['href'] = book_href['imageLinks']['thumbnail']
     
-        
-        
-        
         for author in updated_authors:
             if author['_id'] == ObjectId(author_id):
                 author_name = author['author_name']
@@ -77,7 +72,6 @@ def library():
     
         updated_books.append(book)
         
-   
     # print(updated_books)
     return render_template("library.html", books=updated_books)
 
@@ -121,7 +115,8 @@ def submit_book():
         'reviews': [],
         'likes': [],
         'dislikes': [],
-        'author_id': str(ObjectId(author_id))
+        'author_id': str(ObjectId(author_id)),
+        'isbn_num': request.form.to_dict()['isbn_num']
     }
     new_book = books.insert_one(book)
     #print(new_book.inserted_id)

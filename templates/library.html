@@ -7,7 +7,7 @@
         </div>
     </div>
     <!-- PAGE TITLE END -->
-    
+
     <!-- SEARCH BOOKS & CREATE BOOK START -->
     <div class="row book-search-row">
         <!-- SEARCH FORM START -->
@@ -17,7 +17,7 @@
             <button type="submit" name="action">SEARCH</button>
         </form>
         <!-- SEARCH FORM END -->
-        
+
         <!-- CREATE BOOK START -->
         <div class="col-12">
             <p id='create-book-p'> ...or simply create one <a href='{{ url_for("insert_book") }}'> HERE </a> </p>
@@ -25,7 +25,7 @@
         <!-- CREATE BOOK END -->
     </div>
     <!-- SEATCH BOOKS & CREATE BOOK END -->
-    
+
     <!-- DISPLAY EACH BOOK IN DB START -->
     {% for book in books %}
     <div class="row books-row">
@@ -38,6 +38,9 @@
             <p> {{ book.author_name }} </p>
         </div>
         <div class="col-6">
+            <img src="{{ book.href }}"></img>
+        </div>
+        <div class="col-6">
             <span> GENRE </span>
             <p> {{ book.genre }} </p>
         </div>
@@ -45,34 +48,25 @@
             <span> PAGES </span>
             <p> {{ book.pages }} </p>
         </div>
-        <!--<div class="col-4">-->
-        <!--    <span> LIKES </span>-->
-        <!--    <p> {{ book.likes }} </p>-->
-        <!--</div>-->
-        <!--<div class="col-4">-->
-        <!--    <span> DISLIKES </span>-->
-        <!--    <p> {{ book.dislikes }} </p>-->
-        <!--</div>-->
+
         <div class="col-12">
             <span> REVIEWS </span> {% for review in book.reviews %}
             <p> {{review}} </p>
             {% endfor %}
         </div>
+
         <div class="col-6">
             <a id='review-btn' href='{{ url_for("leave_review", book_id=book._id) }}'>  LEAVE A REVIEW <i class="fas fa-comment-medical"></i> </a>
         </div>
         {% if session %}
         <div class="col-6">
-            <a id='book-collection-btn' href='{{ url_for("add_collection", book_id=book._id) }}'>  ADD BOOK TO COLLECTION <i class="fas fa-book-medical"></i> </a>
-            {% with messages = get_flashed_messages() %}
-                {% if messages %}
-                    <ul class=flashes>
-                        {% for message in messages %}
-                            <li>{{ message }}</li>
-                        {% endfor %}
-                    </ul>
-                {% endif %}
-            {% endwith %}
+            <a id='book-collection-btn' href='{{ url_for("add_collection", book_id=book._id) }}'>  ADD COLLECTION <i class="fas fa-book-medical"></i> </a> {% with messages = get_flashed_messages() %} {% if messages %}
+            <ul class=flashes>
+                {% for message in messages %}
+                <li>{{ message }}</li>
+                {% endfor %}
+            </ul>
+            {% endif %} {% endwith %}
         </div>
         {% endif %}
     </div>

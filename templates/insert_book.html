@@ -8,7 +8,7 @@
         </div>
     </div>
     <!-- PAGE TITLE END -->
-    
+
     <!-- INSERT BOOK FORM START -->
     <form action="{{ url_for('submit_book') }}" method="POST" class="insert-book-form">
         <!-- BOOK TITLE START -->
@@ -17,14 +17,14 @@
             <input id="book_title" name="title" type="text">
         </div>
         <!-- BOOK TITLE END -->
-        
+
         <!-- BOOK AUTHOR START -->
         <div class="form-group">
             <label for="book_author"><span> <i class="fas fa-user-edit"></i> </span> Author </label>
             <input name="author_name" id="authors"></input>
         </div>
         <!-- BOOK AUTHOR END -->
-        
+
         <!-- BOOK GENRE START -->
         <div class="form-group">
             <label for='genre'> <span> <i class="fas fa-folder-open"></i> </span></label>
@@ -36,17 +36,23 @@
             </select>
         </div>
         <!-- BOOK GENRE END -->
-        
+
         <!-- BOOK PAGES START -->
         <div class="form-group">
             <label for="book_pages"> <span> <i class="fas fa-book-open"></i> </span>Pages</label>
             <input id="book_pages" name="pages" type="number">
         </div>
         <!-- BOOK PAGES END -->
-        
+        <!-- ISBN NUM START -->
+        <div class="form-group">
+            <label for="isbn_num"> <span> <i class="fas fa-book-open"></i> </span>ISBN</label>
+            <input id="isbn_num" name="isbn_num" type="text">
+        </div>
+        <!-- ISBN NUM END -->
+
         <!-- INSERT BOOK BUTTON START -->
         <button type='submit' class='btn'> Insert Book </button>
-         <!-- INSERT BOOK BUTTON END -->
+        <!-- INSERT BOOK BUTTON END -->
     </form>
     <!-- INSERT BOOK FORM END -->
 </div>
