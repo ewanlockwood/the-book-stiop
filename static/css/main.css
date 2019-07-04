@@ -2,7 +2,8 @@ body {
   font-family: 'Raleway'; }
 
 .footer-container {
-  background-color: #FFF191; }
+  background-color: #FFF191;
+  padding: 200px; }
   .footer-container ul {
     list-style: none;
     width: 100%;
@@ -481,7 +482,9 @@ body {
         display: block;
         background-color: #53be69;
         color: white;
-        font-size: 13px; } }
+        font-size: 13px; }
+      .library-container .books-row #flashed_book {
+        font-size: 10px; } }
 .insert-book-container {
   height: auto;
   width: 100%;

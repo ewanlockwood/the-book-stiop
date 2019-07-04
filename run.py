@@ -139,7 +139,7 @@ def add_collection(book_id):
             {'username' : session['username'] },
             { '$push' : { 'book_collection' : ObjectId(book_id) } }
         )
-    flash('Book was added to your collection!')
+    flash('A book was just added to your collection!')
     
     return redirect(url_for('library'))
     

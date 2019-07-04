@@ -48,25 +48,24 @@
             <span> PAGES </span>
             <p> {{ book.pages }} </p>
         </div>
-
         <div class="col-12">
             <span> REVIEWS </span> {% for review in book.reviews %}
             <p> {{review}} </p>
             {% endfor %}
         </div>
-
         <div class="col-6">
             <a id='review-btn' href='{{ url_for("leave_review", book_id=book._id) }}'>  LEAVE A REVIEW <i class="fas fa-comment-medical"></i> </a>
         </div>
         {% if session %}
         <div class="col-6">
-            <a id='book-collection-btn' href='{{ url_for("add_collection", book_id=book._id) }}'>  ADD COLLECTION <i class="fas fa-book-medical"></i> </a> {% with messages = get_flashed_messages() %} {% if messages %}
-            <ul class=flashes>
-                {% for message in messages %}
-                <li>{{ message }}</li>
-                {% endfor %}
-            </ul>
-            {% endif %} {% endwith %}
+            <a id='book-collection-btn' href='{{ url_for("add_collection", book_id=book._id) }}'>  ADD COLLECTION <i class="fas fa-book-medical"></i> </a> 
+            {% with messages = get_flashed_messages() %} 
+                {% if messages %}
+                    {% for message in messages %}
+                        <p id='flashed_book'>{{ message }}</p>
+                    {% endfor %}
+                {% endif %} 
+            {% endwith %}
         </div>
         {% endif %}
     </div>
