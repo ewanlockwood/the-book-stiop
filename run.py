@@ -21,10 +21,9 @@ base_api_link = 'https://www.googleapis.com/books/v1/volumes?q=title:'
 # APP ROUTING START 
 # Index
 @app.route('/')
-@app.route('/index')
+@app.route('/index', methods=['POST', 'GET'])
 def index():
-    genres = mongo.db.genres.find()
-    return render_template("index.html", genres=genres)
+    return render_template("index.html", genres = mongo.db.genres.find())
     
 # Library
 @app.route('/library')

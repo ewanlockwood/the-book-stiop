@@ -4,20 +4,27 @@ body {
 
 .footer-container {
     background-color: #FFF191;
-    padding: 200px;
-
-    ul {
-        list-style: none;
-        width: 100%;
-        padding: 0;
+    font-family: 'Raleway';
+    
+    .higher_footer{
+        padding: 50px 150px;
+        
+        a {
+            color: black;
+            font-weight: 600;
+        }
     }
     
-    li {
-        text-align: center;
-    }
-    
-    p{
-        font-size: 11px;
+    .lower_footer{
+        background-color: black;
+        color: white;
+        p{
+            margin: 0;
+            text-align: center;
+            font-size: 11px;
+            width: 100%;
+            padding: 25px 0;
+        }
     }
 }
 

@@ -11,26 +11,26 @@
                     <input name="username" id="username"></input>
                 </div>
                 <!-- USERNAME FORM GROUP END -->
-                
+
                 <!-- PASSWORD FROM GROUP START -->
                 <div class="form-group">
                     <label for="password"> <span> <i class="fas fa-key"></i> </span> Password : </label>
                     <input type="password" id="password" name="password"> </input>
                 </div>
                 <!-- PASSWORD FORM GROUP END -->
-                
+
                 <!-- FAVOURITE GENRE FORM ROUP START -->
                 <div class="form-group">
                     <label for='genre'> <span> <i class="fas fa-folder-open"></i></span> Favourite Genre </label>
                     <select id="genre" name="genre">
-                            <option value="" disabled selected> Choose one </option>
-                            {% for genre in genres %}
-                            <option value="{{genre.genre}}">{{ genre.genre }}</option>
-                            {% endfor %}
-                        </select>
+                        <option value="" disabled selected> Choose one </option>
+                        {% for genre in genres %}
+                        <option value="{{genre.genre}}">{{ genre.genre }}</option>
+                        {% endfor %}
+                    </select>
                 </div>
                 <!-- FAVOURITE GENRE FORM GROUP END -->
-                
+
                 <!-- SUBMIT BUTTON START -->
                 <button type='submit' class='btn'> Create user </button>
                 <!-- SUBMIT BUTTON END -->

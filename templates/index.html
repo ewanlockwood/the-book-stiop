@@ -2,24 +2,6 @@
 
 <!-- CONTAINER START -->
 <div class="container-fluid homepage-head">
-    
-    <!-- HEADER SQUARE ROW START -->
-    <div class="row">
-        <div class="col-12">
-            <div class="yellow-bg">
-                
-            </div>
-            <div class="header-square">
-                <div class="header-inner-square">
-                    <p>
-                        … <br> A place where you can explore books that people with similar interests as you recommend.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- HEADER SQUARE ROW END -->
-
     <!-- BOOK OUTLINE 1 START -->
     <div class="row book-outline">
         <div class="col-12">
@@ -28,6 +10,14 @@
     </div>
     <!-- BOOK OUTLINE 1 START -->
 
+    <!-- HEADER SQUARE ROW START -->
+    <div class="row header-square">
+        <p>
+            … <br> A place where you can explore books that people with similar interests as you recommend.
+        </p>
+    </div>
+    <!-- HEADER SQUARE ROW END -->
+
     <!-- LIBRARY LINK START -->
     <div class="row library-link">
         <div class="col-12">
@@ -35,9 +25,9 @@
         </div>
     </div>
     <!-- LIBRARY LINK END -->
-    
+
     {% if not session %}
-    
+
     <!-- SIGN UP HEADER START -->
     <div class="row sign-up-header-row">
         <div class="col-12">
@@ -46,38 +36,36 @@
         </div>
     </div>
     <!-- SIGN UP HEADER END -->
-    
+
     <!-- SIGN UP START -->
-    <div class="row sign-up-row">
-        <form action="{{ url_for('register') }}" method="POST">
-            <div class="col-12">
-                <p> USERNAME </p>
-                <input type="text" name="username" />
-            </div>
-            <div class="col-12">
-                <p> PASSWORD </p>
-                <input type="password" name="password" />
-            </div>
-            <div class="col-12"> 
-                <p> FAVOURITE GENRE </p>
-                <select name='new_genre' id='new_genre'>
-                    <option value="" disabled selected> Choose Genre </option>
-                    {% for genre in genres %}
-                        <option value="{{genre.genre}}">{{genre.genre}}</option>
-                    {% endfor %}
-                </select>
-            </div>
-            <div class=" offset-7 col-5">
-                <button>
+    <form class="row sign-up-row" action="{{ url_for('register') }}" method="POST">
+        <div class="form-group">
+            <p> USERNAME </p>
+            <input type="text" name="username" />
+        </div>
+        <div class="form-group">
+            <p> PASSWORD </p>
+            <input type="password" name="password" />
+        </div>
+        <div class="form-group">
+            <label for='genre'> FAVOURITE GENRE </label>
+            <select id="genre" name="genre">
+                <option value="" disabled selected> Choose one </option>
+                {% for genre in genres %}
+                <option value="{{genre.genre}}">{{ genre.genre }}</option>
+                {% endfor %}
+            </select>
+        </div>
+        <div class="form-group">
+            <button>
                 SIGN UP
             </button>
-            </div>
-        </form>
-    </div>
+        </div>
+    </form>
     <!-- SIGN UP END -->
-    
+
     {% endif %}
-    
+
 </div>
 <!-- CONTAINER START -->
 

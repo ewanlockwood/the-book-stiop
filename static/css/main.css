@@ -3,281 +3,57 @@ body {
 
 .footer-container {
   background-color: #FFF191;
-  padding: 200px; }
-  .footer-container ul {
-    list-style: none;
-    width: 100%;
-    padding: 0; }
-  .footer-container li {
-    text-align: center; }
-  .footer-container p {
-    font-size: 11px; }
+  font-family: 'Raleway'; }
+  .footer-container .higher_footer {
+    padding: 50px 150px; }
+    .footer-container .higher_footer a {
+      color: black;
+      font-weight: 600; }
+  .footer-container .lower_footer {
+    background-color: black;
+    color: white; }
+    .footer-container .lower_footer p {
+      margin: 0;
+      text-align: center;
+      font-size: 11px;
+      width: 100%;
+      padding: 25px 0; }
 
 .homepage-head {
-  height: 300px;
-  width: 100%;
-  background-color: #FFF191; }
+  font-family: 'Raleway'; }
   .homepage-head .header-square {
-    background-color: white;
-    height: 345px;
-    width: 100%;
-    border: solid 3px #FFF191;
-    padding: 10px;
-    margin-top: 100px; }
-    .homepage-head .header-square .header-inner-square {
-      border: solid 3px black;
-      height: 100%;
-      width: 100%;
-      padding: 75px 25px; }
-      .homepage-head .header-square .header-inner-square p {
-        text-align: center; }
-  .homepage-head .book-outline .book-img {
-    width: 100%;
-    margin: 0px 0 100px 0; }
-  .homepage-head .library-link {
     text-align: center;
-    font-family: 'Raleway';
-    font-size: 36px;
-    letter-spacing: 2px;
-    margin: 25px 0; }
-    .homepage-head .library-link span {
-      background: #fff191;
-      padding: 2px 12px 9px; }
-      .homepage-head .library-link span a {
-        color: #ffffff; }
-  .homepage-head .sign-up-header-row {
-    background-color: #FFF191; }
-    .homepage-head .sign-up-header-row h1 {
-      text-align: center;
-      margin-top: 75px;
-      font-family: 'Raleway', sans-serif;
-      letter-spacing: 5px;
-      font-size: 35px; }
-    .homepage-head .sign-up-header-row p {
-      color: white;
-      letter-spacing: 2px;
-      text-align: center; }
-  .homepage-head .sign-up-row {
-    padding-top: 50px;
-    padding-bottom: 135px;
-    background-color: #FFF191; }
-    .homepage-head .sign-up-row .col-12 {
-      margin: 0 0 10px 0; }
-    .homepage-head .sign-up-row form {
+    padding: 0 25px; }
+  .homepage-head .book-outline img {
+    max-width: 300px;
+    display: block;
+    margin: 0 auto; }
+  .homepage-head .library-link {
+    background-color: #FFF191;
+    padding: 15px 0;
+    font-size: 28px;
+    text-align: center;
+    margin: 50px 0; }
+    .homepage-head .library-link span a {
+      color: black;
+      font-weight: bold; }
+  .homepage-head form {
+    padding: 0 50px; }
+    .homepage-head form .form-group {
+      margin-bottom: 15px;
       width: 100%; }
-      .homepage-head .sign-up-row form p {
-        color: white;
-        letter-spacing: 2px;
-        margin: 0 0 5px; }
-      .homepage-head .sign-up-row form input,
-      .homepage-head .sign-up-row form select {
-        padding: 5px;
-        font-family: 'Raleway', sans-serif;
-        width: 100%;
-        border: none; }
-      .homepage-head .sign-up-row form button {
-        margin-top: 10px;
-        padding: 5px;
-        font-family: 'Raleway', sans-serif;
-        width: 100%;
+      .homepage-head form .form-group p {
+        margin: 0; }
+      .homepage-head form .form-group input,
+      .homepage-head form .form-group select {
         border: none;
-        color: white;
-        background-color: #53be69;
-        letter-spacing: 2px; }
-  .homepage-head .book-search-row .book-img {
-    width: 100%;
-    margin: 100px 0 100px 0; }
-  .homepage-head .book-search-row .search-row {
-    background-color: #FFF191; }
-    .homepage-head .book-search-row .search-row h3 {
-      text-align: center;
-      padding: 10px;
-      font-family: 'Raleway', sans-serif;
-      letter-spacing: 2px;
-      font-size: 18px; }
-    .homepage-head .book-search-row .search-row input {
-      padding: 5px;
-      font-family: 'Raleway', sans-serif;
-      width: 100%;
-      border: none; }
+        width: 100%;
+        padding: 5px 10px; }
+      .homepage-head form .form-group button {
+        border: none;
+        background-color: #5f9aea;
+        padding: 5px 20px; }
 
-@media (min-width: 700px) {
-  .homepage-head {
-    height: 300px;
-    width: 100%;
-    background-color: #FFF191; }
-    .homepage-head .header-square {
-      background-color: white;
-      height: auto;
-      width: 100%;
-      border: solid 3px #FFF191;
-      padding: 10px;
-      margin-top: 100px auto; }
-      .homepage-head .header-square .header-inner-square {
-        border: solid 3px black;
-        height: 100%;
-        width: 100%;
-        padding: 75px 25px; }
-        .homepage-head .header-square .header-inner-square p {
-          text-align: center; }
-    .homepage-head .book-outline .book-img {
-      width: 100%;
-      margin: 0px 0 100px 0; }
-    .homepage-head .library-link {
-      text-align: center;
-      font-family: 'Raleway';
-      font-size: 36px;
-      letter-spacing: 2px;
-      margin: 25px 0; }
-      .homepage-head .library-link span {
-        background: #fff191;
-        padding: 2px 12px 9px; }
-        .homepage-head .library-link span a {
-          color: #ffffff; }
-    .homepage-head .sign-up-header-row {
-      background-color: #FFF191; }
-      .homepage-head .sign-up-header-row h1 {
-        text-align: center;
-        margin-top: 75px;
-        font-family: 'Raleway', sans-serif;
-        letter-spacing: 5px;
-        font-size: 35px; }
-      .homepage-head .sign-up-header-row p {
-        color: white;
-        letter-spacing: 2px;
-        text-align: center; }
-    .homepage-head .sign-up-row {
-      padding-top: 50px;
-      padding-bottom: 135px;
-      background-color: #FFF191; }
-      .homepage-head .sign-up-row .col-12 {
-        margin: 0 0 10px 0; }
-      .homepage-head .sign-up-row form {
-        width: 100%; }
-        .homepage-head .sign-up-row form p {
-          color: white;
-          letter-spacing: 2px;
-          margin: 0 0 5px; }
-        .homepage-head .sign-up-row form input,
-        .homepage-head .sign-up-row form select {
-          padding: 5px;
-          font-family: 'Raleway', sans-serif;
-          width: 100%;
-          border: none; }
-        .homepage-head .sign-up-row form button {
-          margin-top: 10px;
-          padding: 5px;
-          font-family: 'Raleway', sans-serif;
-          width: 100%;
-          border: none;
-          color: white;
-          background-color: #53be69;
-          letter-spacing: 2px; }
-    .homepage-head .book-search-row .book-img {
-      width: 100%;
-      margin: 100px 0 100px 0; }
-    .homepage-head .book-search-row .search-row {
-      background-color: #FFF191; }
-      .homepage-head .book-search-row .search-row h3 {
-        text-align: center;
-        padding: 10px;
-        font-family: 'Raleway', sans-serif;
-        letter-spacing: 2px;
-        font-size: 18px; }
-      .homepage-head .book-search-row .search-row input {
-        padding: 5px;
-        font-family: 'Raleway', sans-serif;
-        width: 100%;
-        border: none; } }
-@media (min-width: 992px) {
-  .homepage-head {
-    height: auto;
-    width: 100%;
-    background-color: white; }
-    .homepage-head .header-square {
-      background-color: transparent;
-      height: auto;
-      width: 66%;
-      border: solid 3px #FFF191;
-      padding: 10px;
-      margin: 100px auto 0 auto; }
-      .homepage-head .header-square .header-inner-square {
-        border: solid 3px black;
-        height: 100%;
-        width: 100%;
-        padding: 75px 25px; }
-        .homepage-head .header-square .header-inner-square p {
-          text-align: center; }
-    .homepage-head .book-outline .book-img {
-      width: 50%;
-      margin: 0px auto 0px auto;
-      display: block; }
-    .homepage-head .library-link {
-      text-align: center;
-      font-family: 'Raleway';
-      font-size: 36px;
-      letter-spacing: 2px;
-      margin: 25px 0; }
-      .homepage-head .library-link span {
-        background: #fff191;
-        padding: 2px 12px 9px; }
-        .homepage-head .library-link span a {
-          color: #ffffff; }
-    .homepage-head .sign-up-header-row {
-      background-color: #FFF191; }
-      .homepage-head .sign-up-header-row h1 {
-        text-align: center;
-        margin-top: 75px;
-        font-family: 'Raleway', sans-serif;
-        letter-spacing: 5px;
-        font-size: 35px; }
-      .homepage-head .sign-up-header-row p {
-        color: white;
-        letter-spacing: 2px;
-        text-align: center; }
-    .homepage-head .sign-up-row {
-      padding-top: 50px;
-      padding-bottom: 135px;
-      background-color: #FFF191; }
-      .homepage-head .sign-up-row .col-12 {
-        margin: 0 0 10px 0; }
-      .homepage-head .sign-up-row form {
-        width: 100%; }
-        .homepage-head .sign-up-row form p {
-          color: white;
-          letter-spacing: 2px;
-          margin: 0 0 5px; }
-        .homepage-head .sign-up-row form input,
-        .homepage-head .sign-up-row form select {
-          padding: 5px;
-          font-family: 'Raleway', sans-serif;
-          width: 100%;
-          border: none; }
-        .homepage-head .sign-up-row form button {
-          margin-top: 10px;
-          padding: 5px;
-          font-family: 'Raleway', sans-serif;
-          width: 100%;
-          border: none;
-          color: white;
-          background-color: #53be69;
-          letter-spacing: 2px; }
-    .homepage-head .book-search-row .book-img {
-      width: 100%;
-      margin: 100px 0 100px 0; }
-    .homepage-head .book-search-row .search-row {
-      background-color: #FFF191; }
-      .homepage-head .book-search-row .search-row h3 {
-        text-align: center;
-        padding: 10px;
-        font-family: 'Raleway', sans-serif;
-        letter-spacing: 2px;
-        font-size: 18px; }
-      .homepage-head .book-search-row .search-row input {
-        padding: 5px;
-        font-family: 'Raleway', sans-serif;
-        width: 100%;
-        border: none; } }
 .navbar {
   background-color: #FFF191;
   font-family: 'Raleway', sans-serif; }
