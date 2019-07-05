@@ -10,7 +10,7 @@ body {
       color: black;
       font-weight: 600; }
   .footer-container .lower_footer {
-    background-color: black;
+    background-color: #8e9195;
     color: white; }
     .footer-container .lower_footer p {
       margin: 0;
@@ -18,38 +18,43 @@ body {
       font-size: 11px;
       width: 100%;
       padding: 25px 0; }
+      .footer-container .lower_footer p a {
+        color: #fff191; }
 
-.homepage-head {
-  font-family: 'Raleway'; }
-  .homepage-head .header-square {
+div.homepage-head {
+  font-family: 'Raleway';
+  padding: 0; }
+  div.homepage-head .header-square {
     text-align: center;
     padding: 0 25px; }
-  .homepage-head .book-outline img {
+  div.homepage-head .book-outline img {
     max-width: 300px;
     display: block;
     margin: 0 auto; }
-  .homepage-head .library-link {
+  div.homepage-head .library-link {
     background-color: #FFF191;
     padding: 15px 0;
     font-size: 28px;
     text-align: center;
     margin: 50px 0; }
-    .homepage-head .library-link span a {
+    div.homepage-head .library-link span a {
       color: black;
       font-weight: bold; }
-  .homepage-head form {
+  div.homepage-head .sign-up-header-row {
+    padding: 0 35px; }
+  div.homepage-head form {
     padding: 0 50px; }
-    .homepage-head form .form-group {
+    div.homepage-head form .form-group {
       margin-bottom: 15px;
       width: 100%; }
-      .homepage-head form .form-group p {
+      div.homepage-head form .form-group p {
         margin: 0; }
-      .homepage-head form .form-group input,
-      .homepage-head form .form-group select {
+      div.homepage-head form .form-group input,
+      div.homepage-head form .form-group select {
         border: none;
         width: 100%;
         padding: 5px 10px; }
-      .homepage-head form .form-group button {
+      div.homepage-head form .form-group button {
         border: none;
         background-color: #5f9aea;
         padding: 5px 20px; }

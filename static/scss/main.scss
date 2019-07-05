@@ -16,7 +16,7 @@ body {
     }
     
     .lower_footer{
-        background-color: black;
+        background-color: #8e9195;
         color: white;
         p{
             margin: 0;
@@ -24,6 +24,10 @@ body {
             font-size: 11px;
             width: 100%;
             padding: 25px 0;
+            
+            a {
+                color: #fff191;
+            }
         }
     }
 }

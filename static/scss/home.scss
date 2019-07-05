@@ -1,5 +1,6 @@
-.homepage-head {
+div.homepage-head {
     font-family: 'Raleway';
+    padding: 0;
 
     .header-square {
         text-align: center;
@@ -21,6 +22,9 @@
             color: black;
             font-weight: bold;
         }
+    }
+    .sign-up-header-row {
+        padding: 0 35px;
     }
     form {
         padding: 0 50px;

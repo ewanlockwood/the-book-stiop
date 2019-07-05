@@ -74,10 +74,14 @@
                 <a class="nav-item nav-link" href="{{ url_for('library') }}"> LIBRARY </a>
                {% if session %}
                     <a class="nav-item nav-link" id='user-id' href="{{ url_for('user', user_id = session.username) }}"> PROFILE </a>
+                
                 {% endif %}
             </nav>
         </div>
         <div class="row lower_footer">
+            {% if not session %}
+                <p> Don't have an account? <a href="{{ url_for('register') }}">Sign up here</a>. </p>
+            {% endif %}
             <p> built by: ewanlockwood </p>
         </div>
     </footer>
