@@ -1,33 +1,45 @@
 div.homepage-head {
     font-family: 'Raleway';
-    padding: 0;
+    margin: 0 0 50px 0;
 
     .header-square {
-        text-align: center;
-        padding: 0 25px;
-    }
-    .book-outline img {
-        max-width: 300px;
-        display: block;
-        margin: 0 auto;
-    }
-    .library-link {
-        background-color: #FFF191;
-        padding: 15px 0;
-        font-size: 28px;
-        text-align: center;
-        margin: 50px 0;
+        p {
+            text-align: center;
+            padding: 0 25px;
+            width: 100%;
+        }
 
+    }
+    .book-outline {
+        div img {
+            max-width: 300px;
+            display: block;
+            margin: 0 auto;
+        }
+    }
+    div.library-link {
+        padding: 0;
+        div {
+            background-color: #fff191;
+            text-align: center;
+            width: 100%;
+            p {
+                margin: 0;
+                padding: 50px 0;
+                font-size: 30px;
+            }
+        }
         span a {
             color: black;
             font-weight: bold;
         }
     }
     .sign-up-header-row {
-        padding: 0 35px;
+        padding: 35px 35px 0 35px;
     }
     form {
         padding: 0 50px;
+
         .form-group {
             margin-bottom: 15px;
             width: 100%;
@@ -43,9 +55,47 @@ div.homepage-head {
             }
             button {
                 border: none;
-                background-color: #5f9aea;
+                background-color: #60a6f0;
                 padding: 5px 20px;
             }
         }
     }
+}
+
+@media only screen and (min-width: 767px) {
+    div.homepage-head {
+        
+         .book-outline {
+        div img {
+            max-width: 700px;
+            display: block;
+            margin: 0 auto;
+        }
+    }
+        .sign-up-header-row {
+             padding: 35px 200px 0 200px;
+        }
+        form {
+            padding: 0 200px;
+        }
+    }
+}
+@media only screen and (min-width: 1023px) {
+    div.homepage-head {
+        
+         .book-outline {
+            div img {
+                max-width: 700px;
+                display: block;
+                margin: 0 auto;
+            }
+        }
+        
+        .sign-up-header-row {
+            padding: 35px 200px 0 200px;
+        }
+            form {
+                padding: 0 200px;
+            }
+        }
 }

@@ -5,7 +5,7 @@ body {
   background-color: #FFF191;
   font-family: 'Raleway'; }
   .footer-container .higher_footer {
-    padding: 50px 150px; }
+    padding: 50px 72px; }
     .footer-container .higher_footer a {
       color: black;
       font-weight: 600; }
@@ -21,27 +21,38 @@ body {
       .footer-container .lower_footer p a {
         color: #fff191; }
 
+@media only screen and (min-width: 727px) {
+  .footer-container .higher_footer {
+    padding: 50px 296px; } }
+@media only screen and (min-width: 1023px) {
+  .footer-container .higher_footer {
+    padding: 50px 424px; } }
 div.homepage-head {
   font-family: 'Raleway';
-  padding: 0; }
-  div.homepage-head .header-square {
+  margin: 0 0 50px 0; }
+  div.homepage-head .header-square p {
     text-align: center;
-    padding: 0 25px; }
-  div.homepage-head .book-outline img {
+    padding: 0 25px;
+    width: 100%; }
+  div.homepage-head .book-outline div img {
     max-width: 300px;
     display: block;
     margin: 0 auto; }
-  div.homepage-head .library-link {
-    background-color: #FFF191;
-    padding: 15px 0;
-    font-size: 28px;
-    text-align: center;
-    margin: 50px 0; }
-    div.homepage-head .library-link span a {
+  div.homepage-head div.library-link {
+    padding: 0; }
+    div.homepage-head div.library-link div {
+      background-color: #fff191;
+      text-align: center;
+      width: 100%; }
+      div.homepage-head div.library-link div p {
+        margin: 0;
+        padding: 50px 0;
+        font-size: 30px; }
+    div.homepage-head div.library-link span a {
       color: black;
       font-weight: bold; }
   div.homepage-head .sign-up-header-row {
-    padding: 0 35px; }
+    padding: 35px 35px 0 35px; }
   div.homepage-head form {
     padding: 0 50px; }
     div.homepage-head form .form-group {
@@ -56,9 +67,27 @@ div.homepage-head {
         padding: 5px 10px; }
       div.homepage-head form .form-group button {
         border: none;
-        background-color: #5f9aea;
+        background-color: #60a6f0;
         padding: 5px 20px; }
 
+@media only screen and (min-width: 767px) {
+  div.homepage-head .book-outline div img {
+    max-width: 700px;
+    display: block;
+    margin: 0 auto; }
+  div.homepage-head .sign-up-header-row {
+    padding: 35px 200px 0 200px; }
+  div.homepage-head form {
+    padding: 0 200px; } }
+@media only screen and (min-width: 1023px) {
+  div.homepage-head .book-outline div img {
+    max-width: 700px;
+    display: block;
+    margin: 0 auto; }
+  div.homepage-head .sign-up-header-row {
+    padding: 35px 200px 0 200px; }
+  div.homepage-head form {
+    padding: 0 200px; } }
 .navbar {
   background-color: #FFF191;
   font-family: 'Raleway', sans-serif; }
@@ -76,65 +105,58 @@ div.homepage-head {
       margin: 0;
       text-align: center;
       font-size: 14px; }
-    .navbar .navbar-nav .login-row form {
+    .navbar .navbar-nav .show {
+      background-color: #fff191; }
+    .navbar .navbar-nav .login-row {
       display: block;
       margin: 20px auto 5px auto; }
-      .navbar .navbar-nav .login-row form p {
+      .navbar .navbar-nav .login-row div p {
         margin: 0;
         letter-spacing: 1px;
         text-align: left; }
-      .navbar .navbar-nav .login-row form input {
+      .navbar .navbar-nav .login-row div input {
         border: none;
         padding: 5px;
         letter-spacing: 3px;
         text-align: center;
-        margin-bottom: 2px; }
-      .navbar .navbar-nav .login-row form button {
+        margin-bottom: 15px; }
+      .navbar .navbar-nav .login-row div button {
         border: none;
         margin: 10px;
         background-color: #60a6f0;
         color: white;
         letter-spacing: 1px; }
 
-@media only screen and (min-width: 992px) {
-  .navbar #user-id {
-    color: #000000; }
+@media only screen and (min-width: 767px) {
   .navbar .navbar-brand {
     font-size: 30px; }
-  .navbar .navbar-nav {
-    text-align: center; }
-    .navbar .navbar-nav .nav-link {
-      font-size: 15px;
-      letter-spacing: 5px; }
-    .navbar .navbar-nav .dropdown-menu {
-      background: #FFF191;
-      border: none;
-      padding: 0;
-      margin: 0;
+  .navbar .navbar-nav .login-row {
+    display: block;
+    font-size: 11px;
+    margin: 25px auto; }
+    .navbar .navbar-nav .login-row div p {
       text-align: center;
-      font-size: 14px; }
-    .navbar .navbar-nav .login-row {
-      font-size: 11px;
-      margin: 0 10px 0 50px; }
-      .navbar .navbar-nav .login-row p {
-        margin: 0;
-        letter-spacing: 1px;
-        text-align: center;
-        padding: 3px; }
-      .navbar .navbar-nav .login-row input {
-        width: 115px;
-        border: none;
-        padding: 3px;
-        letter-spacing: 3px;
-        text-align: center;
-        margin-bottom: 2px; }
-      .navbar .navbar-nav .login-row button {
-        margin: 18px 0 0 0;
-        padding: 2px 10px;
-        border: none;
-        background-color: #60a6f0;
-        color: white;
-        letter-spacing: 1px; } }
+      padding: 3px; }
+    .navbar .navbar-nav .login-row div input {
+      width: 115px;
+      border: none;
+      margin-bottom: 2px; }
+    .navbar .navbar-nav .login-row div button {
+      margin: 18px 0 0 0;
+      padding: 2px 10px;
+      border: none;
+      background-color: #60a6f0;
+      color: white;
+      letter-spacing: 1px; } }
+@media only screen and (min-width: 1023px) {
+  .navbar .navbar-brand {
+    margin-right: 50px; }
+  .navbar .navbar-nav .login-row {
+    display: flex; }
+  .navbar .navbar-nav .nav-link {
+    font-size: 20px; }
+  .navbar .navbar-nav .signup-div span {
+    font-size: 12px; } }
 .library-container {
   background-color: #FFF191;
   font-family: 'Raleway', sans-serif;
@@ -184,6 +206,17 @@ div.homepage-head {
     background-color: white;
     margin-top: 15px;
     padding: 20px 10px; }
+    .library-container .books-row .title-div {
+      text-align: center; }
+      .library-container .books-row .title-div h1 {
+        text-align: center; }
+    .library-container .books-row .img-div {
+      text-align: center;
+      padding: 25px 0; }
+    .library-container .books-row .author-div {
+      text-align: center; }
+    .library-container .books-row .genre-div {
+      text-align: center; }
     .library-container .books-row span {
       margin: 0;
       color: gray;
@@ -191,21 +224,23 @@ div.homepage-head {
     .library-container .books-row #review-btn {
       border: none;
       padding: 10px;
-      margin: auto;
+      margin: 10px 0 10px 0;
       display: block;
+      text-align: center;
       background-color: #166fc9;
       color: white;
       font-size: 13px; }
     .library-container .books-row #book-collection-btn {
       border: none;
       padding: 10px;
-      margin: auto;
+      margin: 10px 0 10px 0;
       display: block;
+      text-align: center;
       background-color: #53be69;
       color: white;
       font-size: 13px; }
 
-@media (min-width: 992px) {
+@media only screen and (min-width: 992px) {
   .library-container {
     background-color: #FFF191;
     font-family: 'Raleway', sans-serif;
@@ -266,6 +301,11 @@ div.homepage-head {
         font-size: 13px; }
       .library-container .books-row #flashed_book {
         font-size: 10px; } }
+@media only screen and (min-width: 1023px) {
+  .library-container .books-row {
+    width: 767px;
+    display: block;
+    margin: auto; } }
 .insert-book-container {
   height: auto;
   width: 100%;
@@ -379,19 +419,23 @@ div.homepage-head {
 
 .user-profile-container {
   margin: 100px 0 0 0;
-  font-family: 'Raleway'; }
-  .user-profile-container h1 {
+  font-family: 'Raleway';
+  min-height: 550px; }
+  .user-profile-container .username-greetins h1 {
     font-size: 30px; }
-  .user-profile-container #fav_genre_span, .user-profile-container select {
-    font-size: 14px; }
-  .user-profile-container select {
-    border: none;
-    color: #166fc9; }
-  .user-profile-container #update_profile_btn {
-    background-color: #166fc9;
-    border-radius: 0;
-    border: none;
-    color: white; }
+  .user-profile-container .user-details {
+    margin: 50px auto 0 auto; }
+    .user-profile-container .user-details #fav_genre_span,
+    .user-profile-container .user-details select {
+      font-size: 14px; }
+    .user-profile-container .user-details select {
+      border: none;
+      color: #166fc9; }
+    .user-profile-container .user-details #update_profile_btn {
+      background-color: #166fc9;
+      border-radius: 0;
+      border: none;
+      color: white; }
 
 .register_container {
   margin-top: 100px;

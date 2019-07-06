@@ -2,7 +2,7 @@
 <!-- CONTAINER START -->
 <div class="container user-profile-container">
     <!-- USERNAME ROW START -->
-    <div class="row">
+    <div class="username-greetings row">
         <div class="col-12">
             <h1> Hi <span> {{ user.username }} </span>, </h1>
         </div>
@@ -10,10 +10,11 @@
     <!-- USERNAME ROW END -->
 
     <!-- PROFILE DETAILS ROW START -->
-    <div class="row">
+    <div class="user-details row">
         <form class='col-12' action="{{ url_for('update_profile', user_id = session.username) }}" method="POST">
             <!-- FAVOURITE GENRE START -->
-            <div class="col-12"> <span id='fav_genre_span'> Your favourite genre is </span>
+            <div class="col-12">
+                <span id='fav_genre_span'> Your favourite genre is </span>
                 <select name='new_genre' id='new_genre'>
                     <option value="" disabled selected> Choose Genre </option>
                     {% for genre in genres %}
@@ -27,9 +28,13 @@
             </div>
             <!-- FAVOURITE GENRE END -->
 
+            <div class="book-collection-title col-12">
+                    <h2> Your Book Collection </h2>
+                </div>
             <!-- BOOK COLLECTION ROW START -->
             {% for book in user_book_collection %}
             <div class="row books-row">
+                
                 <div class="col-12">
                     <span> TITLE </span>
                     <h1> {{book.title}} </h1>

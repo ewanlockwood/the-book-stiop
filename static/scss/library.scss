@@ -66,7 +66,22 @@
         background-color: white;
         margin-top: 15px;
         padding: 20px 10px;
-
+        .title-div {
+            text-align: center;
+            h1 {
+                text-align: center;
+            }
+        }
+        .img-div {
+            text-align: center;
+            padding: 25px 0;
+        }
+        .author-div {
+            text-align: center;
+        }
+        .genre-div{
+            text-align: center;
+        }
         span {
             margin: 0;
             color: gray;
@@ -75,18 +90,21 @@
         #review-btn {
             border: none;
             padding: 10px;
-            margin: auto;
+            margin: 10px 0 10px 0;
             display: block;
+            text-align: center;
             background-color: #166fc9;
             color: white;
             font-size: 13px;
+            
 
         }
         #book-collection-btn {
             border: none;
             padding: 10px;
-            margin: auto;
+            margin: 10px 0 10px 0;
             display: block;
+            text-align: center;
             background-color: #53be69;
             color: white;
             font-size: 13px;
@@ -96,7 +114,7 @@
 
 }
 
-@media(min-width: 992px){
+@media only screen and (min-width: 992px){
     .library-container {
     background-color: #FFF191;
     font-family: 'Raleway', sans-serif;
@@ -181,4 +199,13 @@
     }
 
 }
+}
+@media only screen and (min-width: 1023px) {
+    .library-container {
+        .books-row {
+            width: 767px;
+            display: block;
+            margin: auto;
+        }
+    }
 }

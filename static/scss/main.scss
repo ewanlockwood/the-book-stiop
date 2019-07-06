@@ -5,29 +5,46 @@ body {
 .footer-container {
     background-color: #FFF191;
     font-family: 'Raleway';
-    
-    .higher_footer{
-        padding: 50px 150px;
-        
+
+    .higher_footer {
+        padding: 50px 72px;
+
         a {
             color: black;
             font-weight: 600;
         }
     }
-    
-    .lower_footer{
+
+    .lower_footer {
         background-color: #8e9195;
         color: white;
-        p{
+        p {
             margin: 0;
             text-align: center;
             font-size: 11px;
             width: 100%;
             padding: 25px 0;
-            
+
             a {
                 color: #fff191;
             }
+        }
+    }
+}
+
+@media only screen and (min-width: 727px) {
+    .footer-container {
+        .higher_footer {
+            padding: 50px 296px;
+
+        }
+    }
+}
+@media only screen and (min-width: 1023px) {
+    .footer-container {
+        .higher_footer {
+            padding: 50px 424px;
+
         }
     }
 }

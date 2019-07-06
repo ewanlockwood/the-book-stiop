@@ -29,35 +29,32 @@
     <!-- DISPLAY EACH BOOK IN DB START -->
     {% for book in books %}
     <div class="row books-row">
-        <div class="col-12">
+        <div class="col-xs-12 col-xl-6 title-div">
             <span> TITLE </span>
             <h1> {{book.title}} </h1>
         </div>
-        <div class="col-6">
+        <div class="col-sm-12 img-div">
+            <img src="{{ book.href }}"></img>
+        </div>
+        <div class="col-sm-12 author-div">
             <span> AUTHOR </span>
             <p> {{ book.author_name }} </p>
         </div>
-        <div class="col-6">
-            <img src="{{ book.href }}"></img>
-        </div>
-        <div class="col-6">
+        <div class="col-sm-12 genre-div">
             <span> GENRE </span>
             <p> {{ book.genre }} </p>
         </div>
-        <div class="col-4">
-            <span> PAGES </span>
-            <p> {{ book.pages }} </p>
-        </div>
-        <div class="col-12">
-            <span> REVIEWS </span> {% for review in book.reviews %}
+        <div class="col-sm-12 reviews-div">
+            <span> REVIEWS </span> 
+            {% for review in book.reviews %}
             <p> {{review}} </p>
             {% endfor %}
         </div>
-        <div class="col-6">
+        <div class="col-sm-6">
             <a id='review-btn' href='{{ url_for("leave_review", book_id=book._id) }}'>  LEAVE A REVIEW <i class="fas fa-comment-medical"></i> </a>
         </div>
         {% if session %}
-        <div class="col-6">
+        <div class="col-sm-6">
             <a id='book-collection-btn' href='{{ url_for("add_collection", book_id=book._id) }}'>  ADD COLLECTION <i class="fas fa-book-medical"></i> </a> 
             {% with messages = get_flashed_messages() %} 
                 {% if messages %}
