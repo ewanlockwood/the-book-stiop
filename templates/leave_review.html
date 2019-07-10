@@ -1,6 +1,6 @@
 {% extends 'base.html' %} {% block content %}
 <!-- CONTAINER START -->
-<div class="container leave-review-container">
+<div class="container-fluid leave-review-container">
     <!-- PAGE TITLE START -->
     <div class="row title-row">
         <div class="col-6">
@@ -8,7 +8,6 @@
         </div>
     </div>
     <!-- PAGE TITLE END -->
-    
     <!-- FORM START -->
     <form action="{{ url_for('submit_review', book_id=book._id) }}" method="POST" class="insert-book-form row">
         <!-- REVIEW TEXTAREA START -->
@@ -18,13 +17,11 @@
             <textarea name='reviews' value='{{request.form.review}}'> </textarea>
         </div>
         <!-- REVIEW TEXTAREA END -->
-        
         <!-- SUMBIT BUTTON START -->
         <button type='submit' name='action' class='btn'> SUBMIT REVIEW </button>
         <!-- SUMBIT BUTTON END -->
     </form>
     <!-- FORM END -->
-    
 </div>
 <!-- CONTAINER END -->
 {% endblock %}

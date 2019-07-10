@@ -1,4 +1,5 @@
 {% extends 'base.html' %} {% block content %}
+<!-- CONTAINER START -->
 <div class="container-fluid library-container">
     <!-- PAGE TITLE START -->
     <div class="row title-row">
@@ -7,17 +8,21 @@
         </div>
     </div>
     <!-- PAGE TITLE END -->
-
     <!-- SEARCH BOOKS & CREATE BOOK START -->
     <div class="row book-search-row">
         <!-- SEARCH FORM START -->
         <form action="{{ url_for('library_searched') }}" method="POST" class="col-12 search-bar">
-            <label for="search"> SEARCH FOR A BOOK </label>
+            <label for="search"> SEARCH </label>
+            <select id="type_search" name="type_search">
+                        <option value="" disabled selected> Choose one Catergory </option>
+                        <option value="book">Book</option>
+                        <option value="genre">Genre</option>
+                        <option value="author">Author</option>
+                    </select>
             <input type="search" id="search" name="search" value='{{request.form.search}}' />
             <button type="submit" name="action">SEARCH</button>
         </form>
         <!-- SEARCH FORM END -->
-
         <!-- CREATE BOOK START -->
         <div class="col-12">
             <p id='create-book-p'> ...or simply create one <a href='{{ url_for("insert_book") }}'> HERE </a> </p>
@@ -25,7 +30,6 @@
         <!-- CREATE BOOK END -->
     </div>
     <!-- SEATCH BOOKS & CREATE BOOK END -->
-
     <!-- DISPLAY EACH BOOK IN DB START -->
     {% for book in books %}
     <div class="row books-row">
@@ -45,28 +49,23 @@
             <p> {{ book.genre }} </p>
         </div>
         <div class="col-sm-12 reviews-div">
-            <span> REVIEWS </span> 
-            {% for review in book.reviews %}
+            <span> REVIEWS </span> {% for review in book.reviews %}
             <p> {{review}} </p>
             {% endfor %}
         </div>
-        <div class="col-sm-6">
+        <div class='col-sm-12 col-md-6'>
             <a id='review-btn' href='{{ url_for("leave_review", book_id=book._id) }}'>  LEAVE A REVIEW <i class="fas fa-comment-medical"></i> </a>
         </div>
         {% if session %}
-        <div class="col-sm-6">
-            <a id='book-collection-btn' href='{{ url_for("add_collection", book_id=book._id) }}'>  ADD COLLECTION <i class="fas fa-book-medical"></i> </a> 
-            {% with messages = get_flashed_messages() %} 
-                {% if messages %}
-                    {% for message in messages %}
-                        <p id='flashed_book'>{{ message }}</p>
-                    {% endfor %}
-                {% endif %} 
-            {% endwith %}
+        <div class="col-sm-12 col-md-6">
+            <a id='book-collection-btn' href='{{ url_for("add_collection", book_id=book._id) }}'>  ADD COLLECTION <i class="fas fa-book-medical"></i> </a> {% with messages = get_flashed_messages() %} {% if messages %} {% for message in messages %}
+            <p id='flashed_book'>{{ message }}</p>
+            {% endfor %} {% endif %} {% endwith %}
         </div>
         {% endif %}
     </div>
     {% endfor %}
     <!-- DISPLAY EACH BOOK IN DB END -->
 </div>
+<!-- CONTAINER END -->
 {% endblock %}

@@ -1,6 +1,6 @@
 {% extends "base.html" %} {% block content %}
 <!-- CONTAINER START -->
-<div class="container register_container">
+<div class="container-fluid register-container">
     <!-- FORM ROW START -->
     <div class="row">
         <div class="col-12">
@@ -11,14 +11,12 @@
                     <input name="username" id="username"></input>
                 </div>
                 <!-- USERNAME FORM GROUP END -->
-
                 <!-- PASSWORD FROM GROUP START -->
                 <div class="form-group">
                     <label for="password"> <span> <i class="fas fa-key"></i> </span> Password : </label>
                     <input type="password" id="password" name="password"> </input>
                 </div>
                 <!-- PASSWORD FORM GROUP END -->
-
                 <!-- FAVOURITE GENRE FORM ROUP START -->
                 <div class="form-group">
                     <label for='genre'> <span> <i class="fas fa-folder-open"></i></span> Favourite Genre </label>
@@ -27,15 +25,15 @@
                         {% for genre in genres %}
                         <option value="{{genre.genre}}">{{ genre.genre }}</option>
                         {% endfor %}
-                    </select>
+                    </select> {% with messages = get_flashed_messages() %} {% if messages %} {% for message in messages %}
+                    <p id='flashed_book'>{{ message }}</p>
+                    {% endfor %} {% endif %} {% endwith %}
                 </div>
                 <!-- FAVOURITE GENRE FORM GROUP END -->
-
                 <!-- SUBMIT BUTTON START -->
                 <button type='submit' class='btn'> Create user </button>
                 <!-- SUBMIT BUTTON END -->
             </form>
-            <br>
         </div>
     </div>
     <!-- FORM ROW END -->

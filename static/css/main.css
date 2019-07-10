@@ -180,8 +180,11 @@ div.homepage-head {
       text-align: center;
       display: block;
       letter-spacing: 3px; }
+    .library-container .book-search-row .search-bar select {
+      border: none; }
     .library-container .book-search-row .search-bar input,
-    .library-container .book-search-row .search-bar button {
+    .library-container .book-search-row .search-bar button,
+    .library-container .book-search-row .search-bar select {
       display: block;
       margin-left: auto;
       margin-right: auto;
@@ -304,7 +307,6 @@ div.homepage-head {
 @media only screen and (min-width: 1023px) {
   .library-container .books-row {
     width: 767px;
-    display: block;
     margin: auto; } }
 .insert-book-container {
   height: auto;
@@ -418,47 +420,252 @@ div.homepage-head {
   width: 100%; }
 
 .user-profile-container {
-  margin: 100px 0 0 0;
+  margin: 100px 0 50px 0;
   font-family: 'Raleway';
   min-height: 550px; }
   .user-profile-container .username-greetins h1 {
     font-size: 30px; }
   .user-profile-container .user-details {
-    margin: 50px auto 0 auto; }
-    .user-profile-container .user-details #fav_genre_span,
-    .user-profile-container .user-details select {
-      font-size: 14px; }
-    .user-profile-container .user-details select {
-      border: none;
-      color: #166fc9; }
+    padding: 50px 15px 0;
+    background-color: #fff191; }
+    .user-profile-container .user-details .fav_genre_div {
+      background-color: white;
+      margin-bottom: 10px;
+      text-align: center;
+      padding: 15px 0; }
+      .user-profile-container .user-details .fav_genre_div #fav_genre_span,
+      .user-profile-container .user-details .fav_genre_div select {
+        font-size: 14px; }
+      .user-profile-container .user-details .fav_genre_div select {
+        border: none;
+        color: #166FC9;
+        padding-left: 30px;
+        background-color: white; }
+    .user-profile-container .user-details .book_collection_title {
+      margin: 35px auto; }
+      .user-profile-container .user-details .book_collection_title h2 {
+        font-size: 26px; }
+    .user-profile-container .user-details .books_row {
+      background-color: white;
+      margin-top: 15px;
+      padding: 20px 10px; }
+      .user-profile-container .user-details .books_row .title-div {
+        text-align: center; }
+        .user-profile-container .user-details .books_row .title-div h1 {
+          text-align: center; }
+      .user-profile-container .user-details .books_row .img-div {
+        text-align: center;
+        padding: 25px 0; }
+      .user-profile-container .user-details .books_row .author-div {
+        text-align: center; }
+      .user-profile-container .user-details .books_row .genre-div {
+        text-align: center; }
+      .user-profile-container .user-details .books_row span {
+        margin: 0;
+        color: gray;
+        letter-spacing: 2px; }
+      .user-profile-container .user-details .books_row #review-btn {
+        border: none;
+        padding: 10px;
+        margin: 10px 0 10px 0;
+        display: block;
+        text-align: center;
+        background-color: #166fc9;
+        color: white;
+        font-size: 13px; }
+      .user-profile-container .user-details .books_row #remove_book_btn {
+        padding: 5px;
+        text-align: center;
+        background: #dc3545;
+        color: white; }
+      .user-profile-container .user-details .books_row #book-collection-btn {
+        border: none;
+        padding: 10px;
+        margin: 10px 0 10px 0;
+        display: block;
+        text-align: center;
+        background-color: #53be69;
+        color: white;
+        font-size: 13px; }
     .user-profile-container .user-details #update_profile_btn {
       background-color: #166fc9;
       border-radius: 0;
       border: none;
-      color: white; }
+      color: white;
+      display: block;
+      margin: 25px auto; }
 
-.register_container {
+.register-container {
   margin-top: 100px;
   font-family: 'Raleway' sans-serif; }
-  .register_container input {
+  .register-container input {
     border: solid 1px #fff191;
     padding: 5px;
     width: 100%;
     background-color: white; }
-  .register_container select {
+  .register-container select {
     border: solid 1px #fff191;
     width: 100%;
     padding: 5px; }
-  .register_container label {
+  .register-container label {
     letter-spacing: 2px; }
-    .register_container label i {
+    .register-container label i {
       color: #fff191; }
-  .register_container button {
+  .register-container button {
     border: none;
     padding: 10px;
     background-color: #166fc9;
     color: white;
     width: 100%;
     border-radius: 0px; }
+
+.searched_books_container {
+  background-color: #FFF191;
+  font-family: 'Raleway', sans-serif;
+  height: auto; }
+  .searched_books_container h1 {
+    text-align: left;
+    letter-spacing: 2px;
+    font-size: 28px; }
+  .searched_books_container .title-row h1 {
+    margin: 100px 0 0 0;
+    position: absolute;
+    left: 0;
+    letter-spacing: 5px;
+    background-color: white;
+    padding: 5px; }
+  .searched_books_container .book-search-row .search-bar {
+    margin-top: 175px; }
+    .searched_books_container .book-search-row .search-bar label {
+      font-size: 21px;
+      color: white;
+      text-align: center;
+      display: block;
+      letter-spacing: 3px; }
+    .searched_books_container .book-search-row .search-bar input,
+    .searched_books_container .book-search-row .search-bar button {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 5px; }
+    .searched_books_container .book-search-row .search-bar input {
+      border: none;
+      background-color: white;
+      width: 85%; }
+    .searched_books_container .book-search-row .search-bar button {
+      border: none;
+      background-color: #166fc9;
+      color: white; }
+  .searched_books_container #create-book-p {
+    margin-top: 25px;
+    text-align: center;
+    color: #53be69; }
+    .searched_books_container #create-book-p a {
+      background-color: #53be69;
+      padding: 3px;
+      color: white; }
+  .searched_books_container .books-row {
+    background-color: white;
+    margin-top: 15px;
+    padding: 20px 10px; }
+    .searched_books_container .books-row .title-div {
+      text-align: center; }
+      .searched_books_container .books-row .title-div h1 {
+        text-align: center; }
+    .searched_books_container .books-row .img-div {
+      text-align: center;
+      padding: 25px 0; }
+    .searched_books_container .books-row .author-div {
+      text-align: center; }
+    .searched_books_container .books-row .genre-div {
+      text-align: center; }
+    .searched_books_container .books-row span {
+      margin: 0;
+      color: gray;
+      letter-spacing: 2px; }
+    .searched_books_container .books-row #review-btn {
+      border: none;
+      padding: 10px;
+      margin: 10px 0 10px 0;
+      display: block;
+      text-align: center;
+      background-color: #166fc9;
+      color: white;
+      font-size: 13px; }
+    .searched_books_container .books-row #book-collection-btn {
+      border: none;
+      padding: 10px;
+      margin: 10px 0 10px 0;
+      display: block;
+      text-align: center;
+      background-color: #53be69;
+      color: white;
+      font-size: 13px; }
+
+@media only screen and (min-width: 992px) {
+  .library-container {
+    background-color: #FFF191;
+    font-family: 'Raleway', sans-serif;
+    height: auto; }
+    .library-container .book-search-row .search-bar {
+      margin-top: 175px; }
+      .library-container .book-search-row .search-bar label {
+        font-size: 21px;
+        color: white;
+        text-align: center;
+        display: block;
+        letter-spacing: 3px; }
+      .library-container .book-search-row .search-bar input,
+      .library-container .book-search-row .search-bar button {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 5px; }
+      .library-container .book-search-row .search-bar input {
+        border: none;
+        background-color: white;
+        width: 50%; }
+      .library-container .book-search-row .search-bar button {
+        border: none;
+        background-color: #166fc9;
+        color: white; }
+    .library-container #create-book-p {
+      margin-top: 25px;
+      text-align: center;
+      color: #53be69; }
+      .library-container #create-book-p a {
+        background-color: #53be69;
+        padding: 3px;
+        color: white; }
+    .library-container .books-row {
+      background-color: white;
+      margin-top: 15px;
+      padding: 20px 10px; }
+      .library-container .books-row span {
+        margin: 0;
+        color: gray;
+        letter-spacing: 2px; }
+      .library-container .books-row #review-btn {
+        border: none;
+        padding: 10px;
+        margin: auto;
+        display: block;
+        background-color: #166fc9;
+        color: white;
+        font-size: 13px; }
+      .library-container .books-row #book-collection-btn {
+        border: none;
+        padding: 10px;
+        margin: auto;
+        display: block;
+        background-color: #53be69;
+        color: white;
+        font-size: 13px; }
+      .library-container .books-row #flashed_book {
+        font-size: 10px; } }
+@media only screen and (min-width: 1023px) {
+  .library-container .books-row {
+    width: 767px;
+    margin: auto; } }
 
 /*# sourceMappingURL=main.css.map */

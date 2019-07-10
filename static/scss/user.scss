@@ -1,5 +1,5 @@
 .user-profile-container {
-    margin: 100px 0 0 0;
+    margin: 100px 0 50px 0;
     font-family: 'Raleway';
     min-height: 550px;
 
@@ -9,22 +9,101 @@
         }
     }
     .user-details {
-        margin: 50px auto 0 auto;
-        #fav_genre_span,
-        select {
-            font-size: 14px;
+        padding: 50px 15px 0;
+        background-color: #fff191;
+
+        .fav_genre_div {
+            background-color: white;
+            margin-bottom: 10px;
+            text-align: center;
+            padding: 15px 0;
+            #fav_genre_span,
+            select {
+                font-size: 14px;
+            }
+            select {
+                border: none;
+                color: #166FC9;
+                padding-left: 30px;
+                background-color: white;
+            }
         }
-        select {
-            border: none;
-            color: #166fc9;
+        .book_collection_title {
+            margin: 35px auto;
+            h2 {
+                font-size: 26px;
+            }
+
         }
+        .books_row {
+            background-color: white;
+            margin-top: 15px;
+            padding: 20px 10px;
+
+            .title-div {
+                text-align: center;
+                h1 {
+                    text-align: center;
+                }
+            }
+
+            .img-div {
+                text-align: center;
+                padding: 25px 0;
+            }
+
+            .author-div {
+                text-align: center;
+            }
+
+            .genre-div {
+                text-align: center;
+            }
+
+            span {
+                margin: 0;
+                color: gray;
+                letter-spacing: 2px;
+            }
+
+            #review-btn {
+                border: none;
+                padding: 10px;
+                margin: 10px 0 10px 0;
+                display: block;
+                text-align: center;
+                background-color: #166fc9;
+                color: white;
+                font-size: 13px;
+
+
+            }
+            #remove_book_btn {
+            padding: 5px;
+            text-align: center;
+            background: #dc3545;
+            color: white;
+        }
+            #book-collection-btn {
+                border: none;
+                padding: 10px;
+                margin: 10px 0 10px 0;
+                display: block;
+                text-align: center;
+                background-color: #53be69;
+                color: white;
+                font-size: 13px;
+
+            }
+        }
+        
         #update_profile_btn {
             background-color: #166fc9;
             border-radius: 0;
             border: none;
             color: white;
+            display: block;
+            margin: 25px auto;
         }
     }
-
-
 }

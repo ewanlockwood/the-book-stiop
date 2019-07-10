@@ -1,4 +1,4 @@
-.library-container {
+.searched_books_container {
     background-color: #FFF191;
     font-family: 'Raleway', sans-serif;
     height: auto;
@@ -30,12 +30,9 @@
                 display: block;
                 letter-spacing: 3px;
             }
-            select{
-                border: none;
-            }
+
             input,
-            button,
-            select {
+            button {
                 display: block;
                 margin-left: auto;
                 margin-right: auto;

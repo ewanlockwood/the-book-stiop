@@ -1,5 +1,4 @@
 {% extends 'base.html' %} {% block content %}
-
 <!-- CONTAINER START -->
 <div class="container-fluid homepage-head">
     <!-- BOOK OUTLINE 1 START -->
@@ -9,15 +8,11 @@
         </div>
     </div>
     <!-- BOOK OUTLINE 1 START -->
-
     <!-- HEADER SQUARE ROW START -->
     <div class="row header-square">
-        <p>
-            … <br> A place where you can explore books that people with similar interests as you recommend.
-        </p>
+        <p> … <br> A place where you can explore books that people with similar interests as you recommend.</p>
     </div>
     <!-- HEADER SQUARE ROW END -->
-
     <!-- LIBRARY LINK START -->
     <div class="row library-link">
         <div class="col-12">
@@ -25,7 +20,6 @@
         </div>
     </div>
     <!-- LIBRARY LINK END -->
-
     {% if not session %}
     <!-- SIGN UP HEADER START -->
     <div class="row sign-up-header-row">
@@ -35,7 +29,6 @@
         </div>
     </div>
     <!-- SIGN UP HEADER END -->
-
     <!-- SIGN UP START -->
     <form class="row sign-up-row" action="{{ url_for('register') }}" method="POST">
         <div class="form-group">
@@ -55,6 +48,9 @@
                 {% endfor %}
             </select>
         </div>
+         {% with messages = get_flashed_messages() %} {% if messages %} {% for message in messages %}
+        <p id='flashed_book'>{{ message }}</p>
+        {% endfor %} {% endif %} {% endwith %}
         <div class="form-group">
             <button>
                 SIGN UP
@@ -63,8 +59,6 @@
     </form>
     <!-- SIGN UP END -->
     {% endif %}
-
 </div>
-<!-- CONTAINER START -->
-
+<!-- CONTAINER END -->
 {% endblock %}

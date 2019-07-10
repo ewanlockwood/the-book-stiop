@@ -1,6 +1,6 @@
 {% extends 'base.html' %} {% block content %}
 <!-- CONTAINER START -->
-<div class="container user-profile-container">
+<div class="container-fluid user-profile-container">
     <!-- USERNAME ROW START -->
     <div class="username-greetings row">
         <div class="col-12">
@@ -10,12 +10,11 @@
     <!-- USERNAME ROW END -->
 
     <!-- PROFILE DETAILS ROW START -->
-    <div class="user-details row">
-        <form class='col-12' action="{{ url_for('update_profile', user_id = session.username) }}" method="POST">
-            <!-- FAVOURITE GENRE START -->
-            <div class="col-12">
-                <span id='fav_genre_span'> Your favourite genre is </span>
-                <select name='new_genre' id='new_genre'>
+    <form class="user-details row" action="{{ url_for('update_profile', user_id = session.username) }}" method="POST">
+        <!-- FAVOURITE GENRE START -->
+        <div class="fav_genre_div col-12">
+            <span id='fav_genre_span'> Your favourite genre is </span>
+            <select name='new_genre' id='new_genre'>
                     <option value="" disabled selected> Choose Genre </option>
                     {% for genre in genres %}
                         {% if genre.genre == user.favourite_genre %} 
@@ -25,54 +24,45 @@
                         {% endif %}
                     {% endfor %}
                 </select>
-            </div>
-            <!-- FAVOURITE GENRE END -->
+        </div>
+        <!-- FAVOURITE GENRE END -->
 
-            <div class="book-collection-title col-12">
-                    <h2> Your Book Collection </h2>
-                </div>
-            <!-- BOOK COLLECTION ROW START -->
+        <div class="book_collection_title col-12">
+            <h2> Your Book Collection </h2>
+        </div>
+        <!-- BOOK COLLECTION ROW START -->
+        <div class="col-12">
             {% for book in user_book_collection %}
-            <div class="row books-row">
-                
-                <div class="col-12">
-                    <span> TITLE </span>
-                    <h1> {{book.title}} </h1>
-                </div>
-                <div class="col-6">
-                    <span> AUTHOR </span>
-                    <p> {{ book.author_name }} </p>
-                </div>
-                <div class="col-6">
-                    <img src="{{ book.href }}"></img>
-                </div>
-                <div class="col-6">
-                    <span> GENRE </span>
-                    <p> {{ book.genre }} </p>
-                </div>
-                <div class="col-4">
-                    <span> PAGES </span>
-                    <p> {{ book.pages }} </p>
-                </div>
-                <div class="col-12">
-                    <span> REVIEWS </span> {% for review in book.reviews %}
-                    <p> {{review}} </p>
-                    {% endfor %}
-                </div>
-                <div class="col-6">
-                    <a id='book-collection-btn' href='{{ url_for("remove_collection", book_id=book._id) }}'>  Remove Book from Collection <i class="fas fa-book-medical"></i> </a>
-                </div>
+        <div class="row books_row">
+            <div class="col-xs-12 col-xl-6 title-div">
+                <span> TITLE </span>
+                <h1> {{book.title}} </h1>
             </div>
-            {% endfor %}
-            <!-- BOOK COLLECTION ROW END -->
+            <div class="col-sm-12 img-div">
+                <img src="{{ book.href }}"></img>
+            </div>
+            <div class="col-sm-12 author-div">
+                <span> AUTHOR </span>
+                <p> {{ book.author_name }} </p>
+            </div>
+            <div class="col-sm-12 genre-div">
+                <span> GENRE </span>
+                <p> {{ book.genre }} </p>
+            </div>
+            <div class="col-12 remove_book_div">
+                <a id='remove_book_btn' href='{{url_for("remove_collection", book_id = book._id )}}'> <i class="fas fa-trash-alt"></i> Remove Book from Collection </a>
+            </div>
+        </div>
+        {% endfor %}
+        </div>
+        <!-- BOOK COLLECTION ROW END -->
 
-            <!-- SUBMIT BUTTON START -->
-            <div class="col-12">
-                <button id='update_profile_btn' type="submit" name="action"> Update Profile </button>
-            </div>
-            <!-- SUBMIT BUTTON END -->
-        </form>
-    </div>
+        <!-- SUBMIT BUTTON START -->
+        <div class="col-12">
+            <button id='update_profile_btn' type="submit" name="action"> Update Profile </button>
+        </div>
+        <!-- SUBMIT BUTTON END -->
+    </form>
     <!-- PROFILE DETAILS ROW START -->
 </div>
 <!-- CONTAINER START -->
