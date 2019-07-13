@@ -1,10 +1,10 @@
 .user-profile-container {
-    margin: 100px 0 50px 0;
+    margin: 200px 0 50px 0;
     font-family: 'Raleway';
     min-height: 550px;
 
-    .username-greetins {
-        h1 {
+    .username-greetings {
+        div h1 {
             font-size: 30px;
         }
     }
@@ -46,26 +46,24 @@
                     text-align: center;
                 }
             }
-
             .img-div {
                 text-align: center;
                 padding: 25px 0;
             }
-
             .author-div {
                 text-align: center;
             }
-
             .genre-div {
                 text-align: center;
             }
-
+            .remove_book_div {
+                text-align: center;
+            }
             span {
                 margin: 0;
                 color: gray;
                 letter-spacing: 2px;
             }
-
             #review-btn {
                 border: none;
                 padding: 10px;
@@ -80,9 +78,9 @@
             }
             #remove_book_btn {
             padding: 5px;
-            text-align: center;
             background: #dc3545;
             color: white;
+            width: 100%;
         }
             #book-collection-btn {
                 border: none;
@@ -96,7 +94,6 @@
 
             }
         }
-        
         #update_profile_btn {
             background-color: #166fc9;
             border-radius: 0;

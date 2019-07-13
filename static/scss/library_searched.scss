@@ -1,7 +1,8 @@
-.searched_books_container {
+.searched-books-container {
     background-color: #FFF191;
     font-family: 'Raleway', sans-serif;
     height: auto;
+    margin-top: 200px;
 
     h1 {
         text-align: left;
@@ -30,9 +31,13 @@
                 display: block;
                 letter-spacing: 3px;
             }
-
+            select{
+                border: none;
+                width: 85%;
+            }
             input,
-            button {
+            button,
+            select {
                 display: block;
                 margin-left: auto;
                 margin-right: auto;
@@ -115,58 +120,21 @@
 }
 
 @media only screen and (min-width: 992px){
-    .library-container {
-    background-color: #FFF191;
-    font-family: 'Raleway', sans-serif;
-    height: auto;
+    .searched-books-container {
 
     .book-search-row {
         .search-bar {
-            margin-top: 175px;
-
-            label {
-                font-size: 21px;
-                color: white;
-                text-align: center;
-                display: block;
-                letter-spacing: 3px;
-            }
-
-            input,
-            button {
-                display: block;
-                margin-left: auto;
-                margin-right: auto;
-                margin-top: 5px;
+            select{
+                width: 50%;
             }
             input {
                 border: none;
                 background-color: white;
                 width: 50%;
             }
-            button {
-                border: none;
-                background-color: #166fc9;
-                color: white;
-
-            }
-        }
-    }
-    #create-book-p {
-        margin-top: 25px;
-        text-align: center;
-        color: #53be69;
-
-        a {
-            background-color: #53be69;
-            padding: 3px;
-            color: white;
         }
     }
     .books-row {
-        background-color: white;
-        margin-top: 15px;
-        padding: 20px 10px;
 
         span {
             margin: 0;
@@ -174,37 +142,34 @@
             letter-spacing: 2px;
         }
         #review-btn {
-            border: none;
             padding: 10px;
             margin: auto;
-            display: block;
-            background-color: #166fc9;
-            color: white;
-            font-size: 13px;
-
         }
         #book-collection-btn {
-            border: none;
             padding: 10px;
             margin: auto;
-            display: block;
-            background-color: #53be69;
-            color: white;
-            font-size: 13px;
 
         }
         #flashed_book {
             font-size: 10px;
         }
     }
-
 }
 }
 @media only screen and (min-width: 1023px) {
-    .library-container {
+    .searched-books-container {
+        .book-search-row {
+            .search-row {
+                select{
+                    width: 30%;
+                }
+                input {
+                    width: 30%;
+                }
+            }
+        }
         .books-row {
-            width: 767px;
-            margin: auto;
+            width: 80%;
         }
     }
 }

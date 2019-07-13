@@ -26,7 +26,6 @@
                 </select>
         </div>
         <!-- FAVOURITE GENRE END -->
-
         <div class="book_collection_title col-12">
             <h2> Your Book Collection </h2>
         </div>
@@ -49,14 +48,13 @@
                 <span> GENRE </span>
                 <p> {{ book.genre }} </p>
             </div>
-            <div class="col-12 remove_book_div">
+            <div class="col-sm-12 remove_book_div">
                 <a id='remove_book_btn' href='{{url_for("remove_collection", book_id = book._id )}}'> <i class="fas fa-trash-alt"></i> Remove Book from Collection </a>
             </div>
         </div>
         {% endfor %}
         </div>
         <!-- BOOK COLLECTION ROW END -->
-
         <!-- SUBMIT BUTTON START -->
         <div class="col-12">
             <button id='update_profile_btn' type="submit" name="action"> Update Profile </button>

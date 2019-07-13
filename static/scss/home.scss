@@ -49,7 +49,7 @@ div.homepage-head {
             }
             input,
             select {
-                border: none;
+                border: solid 2px black;
                 width: 100%;
                 padding: 5px 10px;
             }
@@ -64,38 +64,17 @@ div.homepage-head {
 
 @media only screen and (min-width: 767px) {
     div.homepage-head {
-        
-         .book-outline {
-        div img {
-            max-width: 700px;
-            display: block;
-            margin: 0 auto;
+
+        .book-outline {
+            div img {
+                max-width: 700px;
+            }
         }
-    }
         .sign-up-header-row {
-             padding: 35px 200px 0 200px;
+            padding: 35px 200px 0 200px;
         }
         form {
             padding: 0 200px;
         }
     }
-}
-@media only screen and (min-width: 1023px) {
-    div.homepage-head {
-        
-         .book-outline {
-            div img {
-                max-width: 700px;
-                display: block;
-                margin: 0 auto;
-            }
-        }
-        
-        .sign-up-header-row {
-            padding: 35px 200px 0 200px;
-        }
-            form {
-                padding: 0 200px;
-            }
-        }
 }

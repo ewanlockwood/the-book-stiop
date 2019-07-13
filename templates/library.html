@@ -33,22 +33,22 @@
     <!-- DISPLAY EACH BOOK IN DB START -->
     {% for book in books %}
     <div class="row books-row">
-        <div class="col-xs-12 col-xl-6 title-div">
+        <div class="col-12 title-div">
             <span> TITLE </span>
             <h1> {{book.title}} </h1>
         </div>
-        <div class="col-sm-12 img-div">
+        <div class="col-12 img-div">
             <img src="{{ book.href }}"></img>
         </div>
-        <div class="col-sm-12 author-div">
+        <div class="col-12 author-div">
             <span> AUTHOR </span>
             <p> {{ book.author_name }} </p>
         </div>
-        <div class="col-sm-12 genre-div">
+        <div class="col-12 genre-div">
             <span> GENRE </span>
             <p> {{ book.genre }} </p>
         </div>
-        <div class="col-sm-12 reviews-div">
+        <div class="col-12 reviews-div">
             <span> REVIEWS </span> {% for review in book.reviews %}
             <p> {{review}} </p>
             {% endfor %}

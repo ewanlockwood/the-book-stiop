@@ -60,7 +60,6 @@
         }
         .navbar-nav {
             .login-row {
-                display: block;
                 font-size: 11px;
                 margin: 25px auto;
                 
@@ -71,16 +70,11 @@
                     }
                     input {
                         width: 115px;
-                        border: none;
                         margin-bottom: 2px;
                     }
                     button {
                         margin: 18px 0 0 0;
                         padding: 2px 10px;
-                        border: none;
-                        background-color: #60a6f0;
-                        color: white;
-                        letter-spacing: 1px;
                     }
                 }
             }

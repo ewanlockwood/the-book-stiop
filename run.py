@@ -329,6 +329,11 @@ def update_profile(user_id):
 def end_session():
     session.clear()
     return render_template("index.html", genres = mongo.db.genres.find())
+    
+# 404 error page
+@app.errorhandler(404)
+def error_page(e):
+    return render_template('error-page.html'), 404
 
 # App Environment
 if __name__ == '__main__':
