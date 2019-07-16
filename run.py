@@ -220,11 +220,12 @@ def register():
         users = mongo.db.users
         existing_user = users.find_one({'username' : request.form.to_dict()['username']})
         password = request.form.to_dict()['password']
+        username = request.form.to_dict()['username']
         
-        if password == '':
-            flash('no password inserted!')
-        
-        if existing_user is None:
+        if password == '' or username == '':
+            error = 'Please enter a username and password'
+            return render_template('index.html', genres = mongo.db.genres.find(), error = error)
+        elif existing_user is None:
             hashpass = bcrypt.hashpw(request.form['password'].encode('utf-8'), bcrypt.gensalt())
             fav_genre = request.form.to_dict()['genre']
             users.insert_one({

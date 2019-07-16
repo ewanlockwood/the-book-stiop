@@ -53,19 +53,21 @@ div.homepage-head {
       font-weight: bold; }
   div.homepage-head .sign-up-header-row {
     padding: 35px 35px 0 35px; }
-  div.homepage-head form {
+  div.homepage-head .sign-up-row {
     padding: 0 50px; }
-    div.homepage-head form .form-group {
+    div.homepage-head .sign-up-row .error {
+      color: #dc3545; }
+    div.homepage-head .sign-up-row .form-group {
       margin-bottom: 15px;
       width: 100%; }
-      div.homepage-head form .form-group p {
+      div.homepage-head .sign-up-row .form-group p {
         margin: 0; }
-      div.homepage-head form .form-group input,
-      div.homepage-head form .form-group select {
+      div.homepage-head .sign-up-row .form-group input,
+      div.homepage-head .sign-up-row .form-group select {
         border: solid 2px black;
         width: 100%;
         padding: 5px 10px; }
-      div.homepage-head form .form-group button {
+      div.homepage-head .sign-up-row .form-group button {
         border: none;
         background-color: #60a6f0;
         padding: 5px 20px; }
@@ -137,9 +139,12 @@ div.homepage-head {
   .navbar .navbar-nav .login-row {
     display: flex; }
   .navbar .navbar-nav .nav-link {
-    font-size: 20px; }
-  .navbar .navbar-nav .signup-div span {
-    font-size: 12px; } }
+    font-size: 20px;
+    padding: 35px 10px; }
+  .navbar .navbar-nav .signup-div {
+    padding: 27px 0; }
+    .navbar .navbar-nav .signup-div span {
+      font-size: 8px; } }
 .library-container {
   background-color: #FFF191;
   font-family: 'Raleway', sans-serif;
@@ -425,7 +430,7 @@ div.homepage-head {
   background-color: #FFF191;
   font-family: 'Raleway', sans-serif;
   height: auto;
-  margin-top: 200px; }
+  margin: 100px 0 0 0; }
   .searched-books-container h1 {
     text-align: left;
     letter-spacing: 2px;
@@ -510,31 +515,34 @@ div.homepage-head {
       font-size: 13px; }
 
 @media only screen and (min-width: 992px) {
-  .searched-books-container .book-search-row .search-bar select {
-    width: 50%; }
-  .searched-books-container .book-search-row .search-bar input {
-    border: none;
-    background-color: white;
-    width: 50%; }
-  .searched-books-container .books-row span {
-    margin: 0;
-    color: gray;
-    letter-spacing: 2px; }
-  .searched-books-container .books-row #review-btn {
-    padding: 10px;
-    margin: auto; }
-  .searched-books-container .books-row #book-collection-btn {
-    padding: 10px;
-    margin: auto; }
-  .searched-books-container .books-row #flashed_book {
-    font-size: 10px; } }
+  .searched-books-container {
+    margin-top: 117px; }
+    .searched-books-container .book-search-row .search-bar select {
+      width: 50%; }
+    .searched-books-container .book-search-row .search-bar input {
+      border: none;
+      background-color: white;
+      width: 50%; }
+    .searched-books-container .books-row span {
+      margin: 0;
+      color: gray;
+      letter-spacing: 2px; }
+    .searched-books-container .books-row #review-btn {
+      padding: 10px;
+      margin: auto; }
+    .searched-books-container .books-row #book-collection-btn {
+      padding: 10px;
+      margin: auto; }
+    .searched-books-container .books-row #flashed_book {
+      font-size: 10px; } }
 @media only screen and (min-width: 1023px) {
   .searched-books-container .book-search-row .search-row select {
     width: 30%; }
   .searched-books-container .book-search-row .search-row input {
     width: 30%; }
   .searched-books-container .books-row {
-    width: 80%; } }
+    width: 80%;
+    margin: auto; } }
 .error-page-container {
   margin: 150px 0;
   font-family: 'Raleway', sans-serif; }

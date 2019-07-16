@@ -28,7 +28,8 @@
 ## Overview
 
 This is a data-driven web application called 'The Book Stop' that acts like a book library for users. Each user creates
-a profile then can insert and remove books.
+a profile then can insert and remove books their collection from the library. Each book has a genre that can be searched to catergorise the books.
+
 
 -----
 
@@ -37,12 +38,8 @@ a profile then can insert and remove books.
 
 ## Strategy Plane
 
-The inspiration for this project came from <a href="https://ourworldindata.org/natural-disasters"> Our World In Data </a> they had a vast amount
-of dashboards but I decided to use the Natural Disasters database from <a href="https://www.emdat.be/"> The International Disaster Database</a>.
-
-This Interactive Data Dashboard was built to display and visualise data for the end user to interact with. There are charts to further
-improve their knowledge on the effects of disasters. This site was mainly itended for students, for educational purposes or
-people genrally interested in this topic.
+The purpose for this website came from an idea of my friends and I to have a place to share books we recommend.
+This Data Driven Web-application was built to share books with other users with the same genre interests.
 
 ## Scope Plane
 
@@ -63,24 +60,18 @@ padding around each peice of content to create more of a spacious effect so the 
 
 ## Interaction Design
 
-Apart from the interaction with each chart, the menu situated top left was implemented to help catergorise the charts but initally I had planned to add a link to each graph on
-the page.
-
-For Example, below you can see when I change the first drop downmenu to a specific type of disaster the charts will change accordingly.
-
-<img src="assets/img/menu-func.jpg" alt="Menu in initial state"/>
-<img src="assets/img/menu-func2.jpg" alt="Menu in initial state"/>
- 
+The menu situated (top right on mobile) assists the user in navigating through the website.
 
 ## Surface Plane
 
-The typogragphy was found on google fonts and I chose the font <a href="https://fonts.google.com/specimen/Rajdhani">Rajdhani</a> as it
-stood out to me the most, it has a nice futuristic effect with soft-rounded edges.
+The typogragphy was found on google fonts and I chose the font <a href="https://fonts.google.com/specimen/Raleway">Raleway</a> as it
+has nice soft-rounded edges and also has 18 different font variants.
 
 The color scheme I chose for this project is seen below:
 
- - #cedb9c
- - #393b79
+ - #fff191 ( Main color of the website )
+ - #8e9195 ( Footer color )
+ - #60a6f0 ( Main Button Color )
 
 <img src="assets/img/color.png" alt="color scheme"/>
 
@@ -98,10 +89,10 @@ Git Hub was the version control station for this website which was used to manag
 
 ### Existing Features
 
- 1. Single Page Website - This was used to ensure a better user experience.
- 2. Modal - To introduce the website's intentions and functionality.
- 2. Charts - To view a barchart, linechart and pie chart. Additionally, the feature to scroll and zoom into the chart to render more specific data.
- 3. Menu - To catergorise the charts into, type of diaster or country and also to reset each sssssscharts.
+ 1. Users can insert their own book into the library
+ 2. The googlebooks api generates an image that correlates with the book title name.
+ 2. Users can add / remove books to their collection
+ 3. Users can review books
 
 -----
 
@@ -123,15 +114,8 @@ Entirely to enable bootstrap functions with navbar expanding
 ### Bootstrap (https://getbootstrap.com/)
 To use their responsive grid system and also their sass variables where certain variables have an established design to it already.
 
-### DC (https://dc-js.github.io/dc.js/)
-To display interactive charts from datasets.
- 
-### D3 (https://d3js.org/)
-To render each graph
-
-### Crossfilter (http://crossfilter.github.io/crossfilter/)
-To create an interaction with all graphs in the dataset.
- 
+### Python
+To import require modules to connect to Mongo.db and also to create the app using the flask module.
 
 -----
 
@@ -185,11 +169,9 @@ I would now ```$git status``` to check if everything is finished and then look a
 
 ## Credits
 ### Content
-All data came from https://emdat.be.
 All Icons came from https://fontawesome.com/.
-The main font was found at https://fonts.google.com/specimen/Rajdhani.
+The main font was found at https://fonts.google.com/specimen/Releway.
 ### Media
 
-
-
+ 
 

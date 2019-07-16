@@ -31,6 +31,9 @@
     <!-- SIGN UP HEADER END -->
     <!-- SIGN UP START -->
     <form class="row sign-up-row" action="{{ url_for('register') }}" method="POST">
+        {% if error %}
+        <p class="error"> {{ error }} </p>
+        {% endif %}
         <div class="form-group">
             <p> USERNAME </p>
             <input type="text" name="username" />
@@ -42,7 +45,7 @@
         <div class="form-group">
             <label for='genre'> FAVOURITE GENRE </label>
             <select id="genre" name="genre">
-                <option value="" disabled selected> Choose one </option>
+                <option value=" " disabled selected> Choose one </option>
                 {% for genre in genres %}
                 <option value="{{genre.genre}}">{{ genre.genre }}</option>
                 {% endfor %}

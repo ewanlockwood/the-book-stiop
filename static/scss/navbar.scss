@@ -62,7 +62,7 @@
             .login-row {
                 font-size: 11px;
                 margin: 25px auto;
-                
+
                 div {
                     p {
                         text-align: center;
@@ -87,16 +87,19 @@
             margin-right: 50px;
         }
         .navbar-nav {
-            .login-row{
+            .login-row {
                 display: flex;
-                
+
             }
             .nav-link {
                 font-size: 20px;
+                padding: 35px 10px;
             }
             .signup-div {
+                padding: 27px 0;
                 span {
-                    font-size: 12px;
+                    font-size: 8px;
+
                 }
             }
         }

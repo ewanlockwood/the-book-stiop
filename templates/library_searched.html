@@ -2,6 +2,27 @@
 <!-- CONTAINER START -->
 <div class="searched-books-container container-fluid">
     <!-- DISPLAY EACH BOOK MATCHING SEARCH START -->
+    <div class="row book-search-row">
+        <!-- SEARCH FORM START -->
+        <form action="{{ url_for('library_searched') }}" method="POST" class="col-12 search-bar">
+            <label for="search"> SEARCH </label>
+            <select id="type_search" name="type_search">
+                        <option value="" disabled selected> Choose one Catergory </option>
+                        <option value="book">Book</option>
+                        <option value="genre">Genre</option>
+                        <option value="author">Author</option>
+                    </select>
+            <input type="search" id="search" name="search" value='{{request.form.search}}' />
+            <button type="submit" name="action">SEARCH</button>
+        </form>
+        <!-- SEARCH FORM END -->
+        <!-- CREATE BOOK START -->
+        <div class="col-12">
+            <p id='create-book-p'> ...or simply create one <a href='{{ url_for("insert_book") }}'> HERE </a> </p>
+        </div>
+        <!-- CREATE BOOK END -->
+    </div>
+    
     {% for book in result %}
     <div class="row books-row">
         <div class="col-xs-12 col-xl-6 title-div">

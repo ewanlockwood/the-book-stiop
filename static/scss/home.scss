@@ -37,9 +37,13 @@ div.homepage-head {
     .sign-up-header-row {
         padding: 35px 35px 0 35px;
     }
-    form {
+    .sign-up-row {
         padding: 0 50px;
-
+        
+        .error {
+            color: #dc3545;
+        }
+        
         .form-group {
             margin-bottom: 15px;
             width: 100%;
