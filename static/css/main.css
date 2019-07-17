@@ -77,8 +77,16 @@ div.homepage-head {
     max-width: 700px; }
   div.homepage-head .sign-up-header-row {
     padding: 35px 200px 0 200px; }
-  div.homepage-head form {
+  div.homepage-head .sign-up-row {
     padding: 0 200px; } }
+@media only screen and (min-width: 1439px) {
+  div.homepage-head .sign-up-header-row {
+    text-align: center; }
+  div.homepage-head .sign-up-row {
+    padding: 0 400px; }
+    div.homepage-head .sign-up-row .form-group {
+      margin: 0 auto 20px;
+      width: 65%; } }
 .navbar {
   background-color: #FFF191;
   font-family: 'Raleway', sans-serif; }
@@ -430,7 +438,7 @@ div.homepage-head {
   background-color: #FFF191;
   font-family: 'Raleway', sans-serif;
   height: auto;
-  margin: 100px 0 0 0; }
+  margin: 0 0 0 0; }
   .searched-books-container h1 {
     text-align: left;
     letter-spacing: 2px;

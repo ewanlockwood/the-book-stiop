@@ -77,8 +77,24 @@ div.homepage-head {
         .sign-up-header-row {
             padding: 35px 200px 0 200px;
         }
-        form {
+        .sign-up-row {
             padding: 0 200px;
+        }
+    }
+}
+
+@media only screen and (min-width: 1439px) {
+    div.homepage-head{
+        .sign-up-header-row{
+            text-align: center;
+        }
+        .sign-up-row{
+             padding: 0 400px;   
+             .form-group{
+                 margin: 0 auto 20px;
+                 width: 65%;
+                 
+             }
         }
     }
 }

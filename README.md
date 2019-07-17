@@ -121,30 +121,21 @@ To import require modules to connect to Mongo.db and also to create the app usin
 
 ## Testing
 
-I tested this project manually and also with the use of Jasmine.js.
+I tested this project manually.
 
 ## Manual Testing
 
-1. Both Modal "Close" Button and "X" Button successfully close the modal.
+1. All forms work as expected.
 
-2. The "Reset all Data" Button successfully resets all data on each charts.
+2. Responsiveness works on all devices
 
 3. Both Drop Down Menu's successfully change all graphs accordingly.
 
 4. Each Chart Interacts with each other successfully.
 
-I also used Google Developer Tools to simulate a mobile to help me see the responsiveness. I discovered the charts we not rendering proper on small device
-so I introduced a horizontal scroll to help mobile users to view my charts.
+I also used Google Developer Tools to simulate a mobile to help me see the responsiveness.
 
 There are zero errors in the published console log.
-
-## Jasmine Testing
-
-I understood that d3 did not need to be tested as the developers test it already so my main focus with
-jasmine was to test if the methods function successfully called the fucntions to render the charts.
-
-<img src="assets/img/jstest.png" alt="Jasmine Test Screenshot"/>
-
 
 -----
 
