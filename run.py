@@ -14,12 +14,11 @@ app.config["MONGO_URI"] = 'mongodb+srv://root:r00tUser@alphacluster-lqak4.mongod
 mongo = PyMongo(app)
 
 # Google Books API
-base_api_link = 'https://www.googleapis.com/books/v1/volumes?q=title:'
+BASE_API_LINK = 'https://www.googleapis.com/books/v1/volumes?q=title:'
 
 # APP ROUTING START 
 # Index
-@app.route('/')
-@app.route('/index', methods=['POST', 'GET'])
+@app.route('/', methods=['POST', 'GET'])
 def index():
     return render_template("index.html", genres = mongo.db.genres.find())
     
@@ -58,7 +57,7 @@ def library():
         
         google_api_title = book_title.replace(' ', '+')
         book_isbn_num = book['isbn_num']
-        with urllib.request.urlopen(base_api_link + google_api_title) as f:
+        with urllib.request.urlopen(BASE_API_LINK + google_api_title) as f:
             text = f.read()
         decoded_text = text.decode("utf-8")
         obj = json.loads(decoded_text) # deserializes decoded_text to a Python object
@@ -101,7 +100,7 @@ def library_searched():
         book_title = book['title']
         google_api_title = book_title.replace(' ', '+')
         book_isbn_num = book['isbn_num']
-        with urllib.request.urlopen(base_api_link + google_api_title) as f:
+        with urllib.request.urlopen(BASE_API_LINK + google_api_title) as f:
             text = f.read()
         decoded_text = text.decode("utf-8")
         obj = json.loads(decoded_text) # deserializes decoded_text to a Python object
@@ -285,7 +284,7 @@ def user(user_id):
             
             book_isbn_num = book['isbn_num']
             
-            with urllib.request.urlopen(base_api_link + google_api_title) as f:
+            with urllib.request.urlopen(BASE_API_LINK + google_api_title) as f:
                 text = f.read()
             
             decoded_text = text.decode("utf-8")
