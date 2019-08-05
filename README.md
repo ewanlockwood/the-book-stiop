@@ -53,6 +53,14 @@ site as other ideas would come to mind when progressing with the project.
 All Mockups:
 
 <img src="static/assets/adobe_ux/iPhone 6-7-8 – Book – 1.png" alt="color scheme"/>
+<img src="static/assets/adobe_ux/iPhone 6-7-8 – Book – 2.png" alt="color scheme"/>
+<img src="static/assets/adobe_ux/iPhone 6-7-8 – Book – 3.png" alt="color scheme"/>
+<img src="static/assets/adobe_ux/iPhone 6-7-8 Book.png" alt="color scheme"/>
+<img src="static/assets/adobe_ux/iPhone 6-7-8 – Library.png" alt="color scheme"/>
+<img src="static/assets/adobe_ux/iPhone 6-7-8 – Menu close.png" alt="color scheme"/>
+<img src="static/assets/adobe_ux/iPhone 6-7-8 – Menu open.png" alt="color scheme"/>
+<img src="static/assets/adobe_ux/iPhone 6-7-8 – search.png" alt="color scheme"/>
+<img src="static/assets/adobe_ux/iPhone 6-7-8 – Signup.png" alt="color scheme"/>
 
 
 This is the overall structure that I wanted, as the content is minimal with only the chart description and charts availble for the user to look at. Also, I want 
