@@ -63,8 +63,7 @@ All Mockups:
 <img src="static/assets/adobe_ux/iPhone 6-7-8 – Signup.png" alt="color scheme"/>
 
 
-This is the overall structure that I wanted, as the content is minimal with only the chart description and charts availble for the user to look at. Also, I want 
-padding around each peice of content to create more of a spacious effect so the user isn't overwhemled with infomation or content.
+This is the overall structure that I wanted as the color scheme is pleasing to the eye and its not overwhelmed with content
 
 ## Interaction Design
 
@@ -81,15 +80,16 @@ The color scheme I chose for this project is seen below:
  - #8e9195 ( Footer color )
  - #60a6f0 ( Main Button Color )
 
-<img src="assets/img/color.png" alt="color scheme"/>
-
 ### Development
 
 #### IDE
-Cloud9 IDE was the Integrated development enviroment for this website.
+AWS Cloud9 IDE was the Integrated development enviroment for this website.
 
 #### Version Control
 Git Hub was the version control station for this website which was used to manage and store versions of the source code.
+
+### Heroku 
+Heroku was the PaaS that enabled me to build and run my application.
 
 -----
 ## Features
@@ -114,10 +114,10 @@ To provide the structure of the webiste.
 To make the website look better visually.
 
 ### Javascript
-
+Boostrap functionality.
 
 ### Jquery
-Entirely to enable bootstrap functions with navbar expanding
+Entirely to enable bootstrap functions with navbar expanding.
 
 ### Bootstrap (https://getbootstrap.com/)
 To use their responsive grid system and also their sass variables where certain variables have an established design to it already.
@@ -149,7 +149,7 @@ There are zero errors in the published console log.
 
 ## Deployment
 
-The version control and deployment of this project is based on Git Hub. After every session I push the local code within Cloud9 into my GIT HUB repository.
+The version control and deployment of this project is based on Git Hub. After every session I push the local code within AWS Cloud9 into my GIT HUB repository.
 
 
 This is my procedure: 
@@ -170,6 +170,7 @@ I would now ```$git status``` to check if everything is finished and then look a
 ### Content
 All Icons came from https://fontawesome.com/.
 The main font was found at https://fonts.google.com/specimen/Releway.
+The images I used were from Adobe Stock.
 ### Media
 
  
