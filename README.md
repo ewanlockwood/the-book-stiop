@@ -43,17 +43,17 @@ This Data Driven Web-application was built to share books with other users with 
 
 ## Scope Plane
 
-Taking into account that that users will visit my site to look specifically on visual data I want the main attention
-focusing on the graphs themselves. Therefore, little content as possible is required to suffice the goal.
-
+I wanted a nice relaxed theme of a library so I chose the yellow calm, relaxed feel.
 
 ## Structure Plane
 
 Before I started my project I created a mockup using Adobe XD (image below). I understood that this was the foundation of my
 site as other ideas would come to mind when progressing with the project.
 
-<img src="assets/img/mockup-page1.jpg" alt="Mockup Design"/>
-<br>
+All Mockups:
+
+<img src="static/assets/adobe_ux/iPhone 6-7-8 – Book – 1.png" alt="color scheme"/>
+
 
 This is the overall structure that I wanted, as the content is minimal with only the chart description and charts availble for the user to look at. Also, I want 
 padding around each peice of content to create more of a spacious effect so the user isn't overwhemled with infomation or content.

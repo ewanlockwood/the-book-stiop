@@ -10,7 +10,7 @@
     <!-- USERNAME ROW END -->
 
     <!-- PROFILE DETAILS ROW START -->
-    <form class="user-details row" action="{{ url_for('update_profile', user_id = session.username) }}" method="POST">
+    <form class="user-details row" action="{{ url_for('user', user_id = session.username) }}" method="POST">
         <!-- FAVOURITE GENRE START -->
         <div class="fav_genre_div col-12">
             <span id='fav_genre_span'> Your favourite genre is </span>

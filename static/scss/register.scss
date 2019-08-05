@@ -1,23 +1,20 @@
 .register-container {
-    margin-top: 200px;
+    margin: 150px 0 20px;
     font-family: 'Raleway' sans-serif;
 
     input {
-        border: solid 1px #fff191;
+        border: solid 3px #000000;
         padding: 5px;
         width: 100%;
         background-color: white;
     }
     select {
-        border: solid 1px #fff191;
+        border: solid 3px #000000;
         width: 100%;
         padding: 5px;
     }
     label {
         letter-spacing: 2px;
-        i {
-            color: #fff191;
-        }
     }
     button {
         border: none;

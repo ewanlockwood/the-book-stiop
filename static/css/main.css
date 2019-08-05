@@ -157,7 +157,7 @@ div.homepage-head {
   background-color: #FFF191;
   font-family: 'Raleway', sans-serif;
   height: auto;
-  margin-top: 150px; }
+  padding-top: 150px; }
   .library-container h1 {
     text-align: left;
     letter-spacing: 2px;
@@ -271,10 +271,9 @@ div.homepage-head {
 .insert-book-container {
   height: auto;
   width: 100%;
-  padding-top: 25px;
+  padding-top: 200px;
   background-color: #FFF191;
-  font-family: 'Raleway', sans-serif;
-  margin-top: 200px; }
+  font-family: 'Raleway', sans-serif; }
   .insert-book-container .title-row {
     margin-top: 50px; }
     .insert-book-container .title-row h1 {
@@ -305,13 +304,14 @@ div.homepage-head {
       margin: 25px auto; }
 
 .leave-review-container {
-  margin-top: 300px;
-  font-family: 'Raleway', sans-serif; }
+  padding-top: 200px;
+  font-family: 'Raleway', sans-serif;
+  background-color: #fff191; }
   .leave-review-container .title-row h1 {
     position: absolute;
     left: 0;
     letter-spacing: 5px;
-    background-color: #FFF191;
+    background-color: #ffffff;
     padding: 5px; }
   .leave-review-container .insert-book-form {
     margin-top: 100px; }
@@ -323,13 +323,15 @@ div.homepage-head {
         color: #60a6f0; }
     .leave-review-container .insert-book-form div textarea {
       width: 100%;
-      height: 150px; }
+      height: 150px;
+      border: none; }
     .leave-review-container .insert-book-form button {
       border: none;
       display: auto;
       margin: 25px auto;
       background-color: #60a6f0;
       color: white;
+      border-radius: 0px;
       letter-spacing: 1px; }
 
 .user-profile-container {
@@ -411,21 +413,19 @@ div.homepage-head {
       margin: 25px auto; }
 
 .register-container {
-  margin-top: 200px;
+  margin: 150px 0 20px;
   font-family: 'Raleway' sans-serif; }
   .register-container input {
-    border: solid 1px #fff191;
+    border: solid 3px #000000;
     padding: 5px;
     width: 100%;
     background-color: white; }
   .register-container select {
-    border: solid 1px #fff191;
+    border: solid 3px #000000;
     width: 100%;
     padding: 5px; }
   .register-container label {
     letter-spacing: 2px; }
-    .register-container label i {
-      color: #fff191; }
   .register-container button {
     border: none;
     padding: 10px;
