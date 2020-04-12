@@ -169,7 +169,7 @@ I would now ```$git status``` to check if everything is finished and then look a
 ## Credits
 ### Content
 All Icons came from https://fontawesome.com/.
-The main font was found at https://fonts.google.com/specimen/Releway.
+The main font was found at https://fonts.google.com/specimen/Josefin+Sans
 The images I used were from Adobe Stock.
 ### Media
 
